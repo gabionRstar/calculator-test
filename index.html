@@ -1,0 +1,495 @@
+<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Retaining Wall Calculator (copy)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"></head><body>
+<section id="gf-calculator">
+
+
+    <div class="gf-main-row">
+
+
+        <!-- ==================================================
+             1. WALL DETAILS
+        =================================================== -->
+
+        <div class="gf-card gf-light">
+
+            <div class="gf-card-head">
+
+                <h3>
+                    1. Wall Details
+                </h3>
+
+                <span class="gf-small-badge">
+                    WA
+                </span>
+
+            </div>
+
+
+            <div class="gf-field">
+
+                <div class="gf-label-row">
+
+                    <label
+                        class="gf-label"
+                        for="gf-length">
+                        Wall Length
+                    </label>
+
+                    <span
+                        class="gf-value"
+                        id="gf-length-display">
+                        12 metres
+                    </span>
+
+                </div>
+
+
+                <input
+                    id="gf-length"
+                    class="gf-range"
+                    type="range"
+                    min="1"
+                    max="100"
+                    step="1"
+                    value="12"
+                >
+
+
+                <div class="gf-range-labels">
+
+                    <span>1m</span>
+                    <span>25m</span>
+                    <span>50m</span>
+                    <span>75m</span>
+                    <span>100m</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="gf-field">
+
+                <div
+                    class="gf-label"
+                    style="margin-bottom:11px;">
+                    Wall Height
+                </div>
+
+
+                <div class="gf-height-grid">
+
+                    <button
+                        type="button"
+                        class="gf-height-btn"
+                        data-height="0.5">
+                        0.5m
+                    </button>
+
+                    <button
+                        type="button"
+                        class="gf-height-btn active"
+                        data-height="1">
+                        1.0m
+                    </button>
+
+                    <button
+                        type="button"
+                        class="gf-height-btn"
+                        data-height="1.5">
+                        1.5m
+                    </button>
+
+                    <button
+                        type="button"
+                        class="gf-height-btn"
+                        data-height="2">
+                        2.0m
+                    </button>
+
+                    <button
+                        type="button"
+                        class="gf-height-btn"
+                        data-height="2.5">
+                        2.5m
+                    </button>
+
+                    <button
+                        type="button"
+                        class="gf-height-btn"
+                        data-height="3">
+                        3.0m
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="gf-info">
+
+                <div class="gf-info-title">
+                    ✦ CALCULATOR RATES
+                </div>
+
+                <div class="gf-info-row">
+                    <span>0.5m Gabion Kit</span>
+                    <strong>$94 / lm</strong>
+                </div>
+
+                <div class="gf-info-row">
+                    <span>1.0m Gabion Kit</span>
+                    <strong>$170 / lm</strong>
+                </div>
+
+                <div class="gf-info-row">
+                    <span>Stone</span>
+                    <strong>$116 / m³</strong>
+                </div>
+
+                <div class="gf-info-row">
+                    <span>Limestone Installed</span>
+                    <strong>$120 / block</strong>
+                </div>
+
+                <div class="gf-info-row">
+                    <span>Geotextile</span>
+                    <strong>1.2m × 50m roll</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==================================================
+             2. LIMESTONE COMPARISON
+        =================================================== -->
+
+        <div class="gf-card gf-dark">
+
+            <div class="gf-card-head">
+
+                <h3>
+                    2. Limestone Comparison
+                </h3>
+
+                <span class="gf-small-badge">
+                    INSTALLED BY CONTRACTOR
+                </span>
+
+            </div>
+
+
+            <div class="gf-saving-label">
+                Here’s what you can save
+            </div>
+
+
+            <div
+                class="gf-saving-number"
+                id="gf-saving">
+                $4,464
+            </div>
+
+
+            <div class="gf-saving-text">
+                Estimated saving compared with installed
+                1 metre reconstituted limestone blocks.
+            </div>
+
+
+            <hr class="gf-divider">
+
+
+            <div class="gf-dark-list">
+
+                <div class="gf-dark-row">
+
+                    <span>
+                        1 Metre Reconstituted Limestone Blocks
+                    </span>
+
+                    <strong id="gf-blocks">
+                        60 blocks
+                    </strong>
+
+                </div>
+
+
+                <div class="gf-dark-row">
+
+                    <span>
+                        Installed Price
+                    </span>
+
+                    <strong>
+                        $120 / block
+                    </strong>
+
+                </div>
+
+
+                <div class="gf-dark-row gf-dark-total">
+
+                    <span>
+                        Limestone Blocks Installed
+                    </span>
+
+                    <strong id="gf-limestone-total">
+                        $7,200
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="gf-percent-box">
+
+                <div class="gf-percent-label">
+                    Approximate Saving
+                </div>
+
+                <div
+                    class="gf-percent-number"
+                    id="gf-percent">
+                    62%
+                </div>
+
+            </div>
+
+
+            <div class="gf-black-note">
+
+                <strong>
+                    Not an installed gabion price.
+                </strong>
+
+                Kit + delivered stone only.
+                Limestone figure includes contract labour.
+                Materials are typically cheaper on comparison;
+                any extra saving depends on you doing the labour
+                yourself, as shown in the DIY video.
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==================================================
+             3. GABION KIT + STONE
+        =================================================== -->
+
+        <div class="gf-card gf-light">
+
+            <div class="gf-card-head">
+
+                <h3>
+                    3. Gabion Kit + Stone
+                </h3>
+
+                <span class="gf-small-badge">
+                    DELIVERED
+                </span>
+
+            </div>
+
+
+            <div class="gf-price-list">
+
+                <div class="gf-price-row">
+
+                    <span>
+                        Gabion Build
+                    </span>
+
+                    <strong id="gf-build-type">
+                        1 × 1.0m high kit
+                    </strong>
+
+                </div>
+
+
+                <div class="gf-price-row">
+
+                    <span>
+                        Required Kit / Lifts
+                    </span>
+
+                    <strong id="gf-lifts">
+                        1
+                    </strong>
+
+                </div>
+
+
+                <div class="gf-price-row">
+
+                    <span>
+                        Gabion Kit
+                    </span>
+
+                    <strong id="gf-kit-cost">
+                        $2,040
+                    </strong>
+
+                </div>
+
+
+                <div class="gf-price-row">
+
+                    <span id="gf-stone-label">
+                        Stone (~6.00 m³)
+                    </span>
+
+                    <strong id="gf-stone-cost">
+                        $696
+                    </strong>
+
+                </div>
+
+
+                <div class="gf-price-row">
+
+                    <span>
+                        Kit + Stone / lm
+                    </span>
+
+                    <strong id="gf-per-metre">
+                        $228
+                    </strong>
+
+                </div>
+
+
+                <div class="gf-price-row">
+
+                    <span>
+                        Geotextile Required
+                    </span>
+
+                    <strong id="gf-geotextile">
+                        1 roll
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="gf-total-box">
+
+                <div class="gf-total-label">
+                    GABION KIT + STONE DELIVERED
+                </div>
+
+                <div
+                    class="gf-total-value"
+                    id="gf-gabion-total">
+                    $2,736
+                </div>
+
+            </div>
+
+
+            <div class="gf-cart-package">
+
+                <div class="gf-info-title">
+                    ✦ YOUR WALL PACKAGE
+                </div>
+
+
+                <div class="gf-info-row">
+
+                    <span>
+                        Gabion Kit
+                    </span>
+
+                    <strong id="gf-cart-kit">
+                        1.0m × 12m
+                    </strong>
+
+                </div>
+
+
+                <div class="gf-info-row">
+
+                    <span>
+                        Geotextile
+                    </span>
+
+                    <strong id="gf-cart-geotextile">
+                        1 × 50m roll
+                    </strong>
+
+                </div>
+
+
+                <a
+                    class="gf-cart-btn"
+                    id="gf-add-cart"
+                    href="https://gabionfabrication.com.au/products/galfan%C2%AE-welded-mesh-gabion-kit-0-5m-wide-x-1m-high-x-2m-long">
+                    Get my kit now!
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ==================================================
+         DISCLAIMER
+    =================================================== -->
+
+    <div class="gf-bottom-disclaimer">
+
+        <div class="gf-bottom-disclaimer-title">
+            Disclaimer
+        </div>
+
+        <p>
+            Gabion DIY total is mesh kit + delivered stone fill only.
+            It is not an installed gabion price. Limestone total is
+            practical 1 m reconstituted blocks, stepped quantities,
+            at $120 incl. GST per block including contract labour.
+            Estimate only.
+        </p>
+
+        <p>
+            Gabion installation labour, excavation, plant, engineering
+            and permits are not in the gabion DIY figure. Site conditions,
+            surcharge and drainage detailing can change both sides.
+        </p>
+
+        <p>
+            Figures are estimates for comparison only. Not a quote.
+            Materials are typically cheaper on this comparison. Any extra
+            saving depends on you doing the gabion labour yourself, as shown
+            in the DIY video.
+        </p>
+
+    </div>
+
+
+    <div class="gf-footer">
+
+        Gabion Fabrication ·
+        910 Lakes Road, Nambeelup WA 6207 ·
+        Custom design, fabrication & installation
+        across Western Australia.
+
+    </div>
+
+</section>
+
+
+<script src="calculator.js"></script>
+</body></html>

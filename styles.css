@@ -1,0 +1,586 @@
+/* =========================================================
+   GABION CALCULATOR
+========================================================= */
+
+#gf-calculator {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #171717;
+    isolation: isolate;
+    position: relative;
+}
+
+#gf-calculator *,
+#gf-calculator *::before,
+#gf-calculator *::after {
+    box-sizing: border-box;
+}
+
+#gf-calculator button,
+#gf-calculator input,
+#gf-calculator a {
+    font: inherit;
+}
+
+
+/* =========================================================
+   MAIN GRID
+========================================================= */
+
+#gf-calculator .gf-main-row {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+    gap: 18px;
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+#gf-calculator .gf-card {
+    min-width: 0;
+    padding: 25px;
+    border-radius: 22px;
+}
+
+#gf-calculator .gf-light {
+    background: #f7f7f7;
+    border: 2px solid #d5d5d5;
+}
+
+#gf-calculator .gf-dark {
+    background: linear-gradient(135deg, #101010, #242424);
+    border: 3px solid #000;
+    color: #fff;
+}
+
+
+/* =========================================================
+   CARD HEADERS
+========================================================= */
+
+#gf-calculator .gf-card-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #ddd;
+}
+
+#gf-calculator .gf-card-head h3 {
+    margin: 0;
+    flex: 1 1 180px;
+    min-width: 0;
+    font-size: 19px;
+    line-height: 1.3;
+    font-weight: 900;
+}
+
+#gf-calculator .gf-dark .gf-card-head {
+    border-color: #3c3c3c;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#gf-calculator .gf-dark .gf-card-head h3 {
+    flex: none;
+    width: 100%;
+}
+
+
+/* =========================================================
+   BADGES
+========================================================= */
+
+#gf-calculator .gf-small-badge {
+    display: inline-block;
+    max-width: 100%;
+    padding: 6px 8px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 9px;
+    line-height: 1.3;
+    font-weight: 900;
+    letter-spacing: .6px;
+    white-space: normal;
+    text-align: center;
+}
+
+#gf-calculator .gf-dark .gf-small-badge {
+    background: #000;
+    border-color: #444;
+    color: #fff;
+}
+
+
+/* =========================================================
+   FIELDS
+========================================================= */
+
+#gf-calculator .gf-field {
+    margin-bottom: 28px;
+}
+
+#gf-calculator .gf-label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 11px;
+}
+
+#gf-calculator .gf-label {
+    font-size: 14px;
+    font-weight: 800;
+}
+
+#gf-calculator .gf-value {
+    padding: 8px 12px;
+    background: #fff;
+    border: 2px solid #aaa;
+    border-radius: 10px;
+    font-family: monospace;
+    font-size: 16px;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   SLIDER
+========================================================= */
+
+#gf-calculator .gf-range {
+    width: 100%;
+    height: 8px;
+    appearance: none;
+    -webkit-appearance: none;
+    background: #ddd;
+    border: 0;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+#gf-calculator .gf-range::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 23px;
+    height: 23px;
+    background: #000;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 7px rgba(0,0,0,.3);
+}
+
+#gf-calculator .gf-range::-moz-range-thumb {
+    width: 23px;
+    height: 23px;
+    background: #000;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#gf-calculator .gf-range-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    color: #777;
+    font-family: monospace;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   HEIGHT BUTTONS
+========================================================= */
+
+#gf-calculator .gf-height-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 7px;
+}
+
+#gf-calculator .gf-height-btn {
+    min-height: 45px;
+    padding: 10px 5px;
+    background: #fff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    color: #171717;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+#gf-calculator .gf-height-btn:hover {
+    border-color: #777;
+}
+
+#gf-calculator .gf-height-btn.active {
+    background: #000;
+    border-color: #000;
+    color: #fff;
+}
+
+
+/* =========================================================
+   INFO
+========================================================= */
+
+#gf-calculator .gf-info,
+#gf-calculator .gf-cart-package {
+    padding: 15px;
+    background: #eee;
+    border: 1px solid #ddd;
+    border-radius: 14px;
+}
+
+#gf-calculator .gf-cart-package {
+    margin-top: 18px;
+}
+
+#gf-calculator .gf-info-title {
+    margin-bottom: 10px;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: .7px;
+}
+
+#gf-calculator .gf-info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 7px 0;
+    border-bottom: 1px solid #d7d7d7;
+    color: #555;
+    font-size: 11px;
+}
+
+#gf-calculator .gf-info-row:last-child {
+    border-bottom: 0;
+}
+
+#gf-calculator .gf-info-row strong {
+    color: #171717;
+    text-align: right;
+}
+
+
+/* =========================================================
+   PRICE ROWS
+========================================================= */
+
+#gf-calculator .gf-price-list {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+#gf-calculator .gf-price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ddd;
+    font-size: 12px;
+}
+
+#gf-calculator .gf-price-row span {
+    color: #666;
+}
+
+#gf-calculator .gf-price-row strong {
+    font-size: 14px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   TOTAL
+========================================================= */
+
+#gf-calculator .gf-total-box {
+    margin-top: 18px;
+    padding: 16px;
+    background: #fff;
+    border: 2px solid #ccc;
+    border-radius: 14px;
+}
+
+#gf-calculator .gf-total-label {
+    margin-bottom: 5px;
+    color: #666;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: .5px;
+}
+
+#gf-calculator .gf-total-value {
+    font-size: 29px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+#gf-calculator .gf-cart-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 52px;
+    margin-top: 13px;
+    padding: 14px;
+    background: #E8C547;
+    border: 0;
+    border-radius: 12px;
+    color: #000 !important;
+    font-size: 14px;
+    font-weight: 900;
+    text-decoration: none !important;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+#gf-calculator .gf-cart-btn:hover {
+    background: #d9b83f;
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   SAVINGS
+========================================================= */
+
+#gf-calculator .gf-saving-label {
+    color: #E8C547;
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 900;
+}
+
+#gf-calculator .gf-saving-number {
+    margin: 10px 0 5px;
+    font-size: clamp(35px, 4vw, 52px);
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: -2px;
+}
+
+#gf-calculator .gf-saving-text {
+    color: #ddd;
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+#gf-calculator .gf-divider {
+    margin: 22px 0;
+    border: 0;
+    border-top: 1px solid #444;
+}
+
+
+/* =========================================================
+   DARK RESULTS
+========================================================= */
+
+#gf-calculator .gf-dark-list {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+#gf-calculator .gf-dark-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    color: #bbb;
+    font-family: monospace;
+    font-size: 11px;
+}
+
+#gf-calculator .gf-dark-row strong {
+    color: #fff;
+    text-align: right;
+}
+
+#gf-calculator .gf-dark-total {
+    padding-top: 15px;
+    margin-top: 3px;
+    border-top: 1px solid #444;
+}
+
+#gf-calculator .gf-dark-total strong {
+    font-size: 19px;
+}
+
+
+/* =========================================================
+   PERCENT
+========================================================= */
+
+#gf-calculator .gf-percent-box {
+    margin-top: 18px;
+    padding: 14px;
+    background: rgba(255,255,255,.06);
+    border: 1px solid #444;
+    border-radius: 11px;
+}
+
+#gf-calculator .gf-percent-label {
+    margin-bottom: 4px;
+    color: #aaa;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#gf-calculator .gf-percent-number {
+    font-size: 27px;
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   BLACK NOTE
+========================================================= */
+
+#gf-calculator .gf-black-note {
+    margin-top: 18px;
+    padding: 14px 15px;
+    background: rgba(0,0,0,.45);
+    border: 1px solid #414141;
+    border-radius: 11px;
+    color: #c9c9c9;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+#gf-calculator .gf-black-note strong {
+    color: #fff;
+}
+
+
+/* =========================================================
+   DISCLAIMER
+========================================================= */
+
+#gf-calculator .gf-bottom-disclaimer {
+    width: 100%;
+    margin-top: 22px;
+    padding: 24px 26px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    color: #555;
+    font-size: 12px;
+    line-height: 1.65;
+}
+
+#gf-calculator .gf-bottom-disclaimer-title {
+    margin-bottom: 12px;
+    color: #171717;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+#gf-calculator .gf-bottom-disclaimer p {
+    margin: 0 0 10px;
+}
+
+#gf-calculator .gf-bottom-disclaimer p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+#gf-calculator .gf-footer {
+    max-width: 1150px;
+    margin: 20px auto 0;
+    color: #777;
+    text-align: center;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1050px) {
+
+    #gf-calculator .gf-main-row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #gf-calculator .gf-card:nth-child(3) {
+        grid-column: 1 / -1;
+    }
+}
+
+@media(max-width:700px) {
+
+    #gf-calculator {
+        padding: 25px 15px;
+    }
+
+    #gf-calculator .gf-main-row {
+        grid-template-columns: 1fr;
+    }
+
+    #gf-calculator .gf-card:nth-child(3) {
+        grid-column: auto;
+    }
+
+    #gf-calculator .gf-card {
+        padding: 21px;
+    }
+
+    #gf-calculator .gf-bottom-disclaimer {
+        padding: 20px;
+        font-size: 11px;
+    }
+}
+
+@media(max-width:420px) {
+
+    #gf-calculator .gf-height-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #gf-calculator .gf-label-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+/* fonts */
+h1,h2,h3,.gf-headline{font-family:'Anton',Impact,sans-serif}
