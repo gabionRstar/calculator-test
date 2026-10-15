@@ -7,11 +7,11 @@ Gabion Fabrication, WA. Mobile-first, dark background, Anton headlines, Inter bo
 
 Source mockup: `screen1.html` (360×800, rendered at 2x).
 
-- Top: big **★★★★★ 5.0 average from Google reviews**. Under it: "Real customers. Words unedited."
+- Top: a row of five custom **gabion stars** (`img/gabion-star.svg`), then **5.0 on Google reviews**. Under it: "Real customers. Words unedited."
 - A row of reviewer avatars.
 - **Lead testimonial (yellow-bordered card):** "Josh's work is second to none!!!", with the excerpt "…flew all the way from WA to our hometown in Qld…" under it.
-  - The reviewer is the Gympie (QLD) customer. **Her name and photo still need confirming with Joshua**: aggregator sites show the text but not her name.
-- 3 snippet cards. Each has the reviewer's face or initials, their name and 5 stars:
+  - Credited as "Gympie QLD customer · Google", with a "Photo pending" circle until Joshua confirms her name and photo.
+- 3 snippet cards. Each has the reviewer's face or initials, their name and 5 small gabion stars:
   - "Quick response, accurate online quote" (Ryan marshall)
   - "We couldn't be happier!" (Emma Horne)
   - "Quicker than expected" (Nasir Mastor)
@@ -23,6 +23,8 @@ Source mockup: `screen1.html` (360×800, rendered at 2x).
 - Every snippet is a word-for-word excerpt from that person's real 5★ review.
 - Don't rewrite them.
 - Don't use the review posted under the owner's name (Joshua Cappello).
+
+**Gabion star icon:** a five-point star made of galvanised wire mesh over grey and sandstone rocks, with a silver wire frame and a yellow #FFCB00 rim. Files: `img/gabion-star.svg`, `img/gabion-star.png`, `img/gabion-star-512.png`.
 
 **Avatars:**
 - Nasir Mastor's avatar is his real Google profile photo, via Trustindex.
