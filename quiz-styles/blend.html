@@ -36,9 +36,10 @@ select,input,textarea{background:#1f1f1f;border:1px solid #3a3a3a;color:#fff}.co
 .cta{display:inline-block;background:#FFCB00;color:#111;font-weight:700;font-size:18px;padding:16px 34px;border-radius:12px;text-decoration:none;margin-bottom:20px}
 .qz{border-top:1px solid #262626;margin-top:20px}.hero{height:180px}
 @media(min-width:820px){.lead{grid-template-columns:1fr 1fr;align-items:center}.grid{grid-template-columns:repeat(3,1fr)}.rc.craig{grid-column:span 3;display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center}.rc.craig img.w{height:240px}.hero{height:240px}}
-.hero{position:relative;isolation:isolate;background:#141414 url(gabion-planter-wall.jpg) left center/50% auto no-repeat;background-size:cover}
-.hero::before{content:"";position:absolute;inset:0 0 0 38%;background:url(../quiz-plan/img/limestone-pier.jpg) center/cover;-webkit-mask-image:linear-gradient(100deg,transparent 0,#000 30%);mask-image:linear-gradient(100deg,transparent 0,#000 30%);z-index:-2}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#141414,rgba(20,20,20,.3));z-index:-1}
+.hero{position:relative;isolation:isolate;background:#141414}
+.hero::before,.hero::after{content:"";position:absolute;top:0;bottom:0;z-index:-1;background-size:cover;background-position:center}
+.hero::before{left:0;width:50%;background-image:linear-gradient(0deg,#141414,rgba(20,20,20,.3)),url(gabion-planter-wall.jpg)}
+.hero::after{right:0;width:50%;border-left:2px solid #FFCB00;background-image:linear-gradient(0deg,#141414,rgba(20,20,20,.3)),url(../quiz-plan/img/limestone-pier.jpg)}
 .hero>*{position:relative}</style></head><body><header class="rh"><span class="wm">GABION FABRICATION</span>
 <div class="big"><span class="stars">★★★★★</span><b>5.0</b></div><div class="avg">average from Google reviews</div>
 <div class="kick">Real customers. Words unedited.</div>
