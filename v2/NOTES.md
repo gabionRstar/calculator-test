@@ -3,8 +3,10 @@
 Pages: `v2/` (landing) → `v2-quiz/` (proof + quiz + form) → `promise-terms/` (conditions).
 Originals `kpi-style/`, `faded-split/`, `promise-terms/` are unchanged.
 
+**Live on v2 (18 Oct 2026, Josh's order):** headline **"Quote in 2 days or we pay you $500.*"** → mid line "Limestone and Gabion walls for Perth and Bunbury homeowners" → "Gabion walls built to last up to 80 years." + BBA proof line → "Built by Josh's crew. Backed by a 7-year workmanship warranty."
+
 ## 1. Headline variants (A/B)
-1. **Gabion walls built to last up to 80 years. Quote in 2 days or we pay you $500.*** ← live on v2
+1. **Gabion walls built to last up to 80 years. Quote in 2 days or we pay you $500.*** (previous v2 headline)
 2. **Retaining wall quote in 2 days, or we pay you $500.*** (promise only)
 3. **WA homeowners: your retaining wall quote in 2 days, or we pay you $500.***
 4. **Your wall quote in 2 days. Miss it, and we pay you $500.***
@@ -14,7 +16,7 @@ Rules kept: "up to" always on the 80-year line (mesh coating's tested life, neve
 
 ## 2. Proof layout (mobile order)
 **Page 1 (v2/)**
-1. Hero (plain 50/50 gabion | limestone split): brand → ★ 5.0 on Google → headline → sub ("Gabion and limestone retaining walls for Perth and Bunbury homeowners", Josh's crew, 7-year workmanship warranty as the bonus) → Galfan-coated mesh proof line + BBA certificate link → GET MY QUOTE IN 2 DAYS → or call 0458 740 333 → *Conditions apply. (All in the first 412×780 screen.)
+1. Hero (plain 50/50 gabion | limestone split): wordmark logo (logo-wordmark.png; logo-icon.svg favicon) → ★ 5.0 on Google → headline "Quote in 2 days or we pay you $500.*" → "Limestone and Gabion walls for Perth and Bunbury homeowners" → "Gabion walls built to last up to 80 years." → Galfan-coated mesh BBA proof line + certificate link → "Built by Josh's crew. Backed by a 7-year workmanship warranty." → GET MY QUOTE IN 2 DAYS → or call 0458 740 333 → *Conditions apply. (All in the first 412×780 screen.)
 2. 5.0 rating + promise-backing reviews: Craig Dixon (Western Australia, lead local review), then Sarah Wilson (communication, product knowledge, seamless install), then Ryan ("Quick response, accurate online quote"), then Nasir ("Quicker than expected").
 3. Stat tiles: [walls built] · 50+ years combined experience.
 4. Two ways to build it: Gabion card (Galfan-coated mesh, up to 80 years (BBA) · Modern rock look · Drains freely → ../v2-quiz/?type=gabion) and Limestone card (Engineered limestone block walls · Classic Perth look · Built by Josh's crew · Backed by our 7-year workmanship warranty → ../v2-quiz/?type=limestone). No limestone lifespan, stats or prices claimed.
