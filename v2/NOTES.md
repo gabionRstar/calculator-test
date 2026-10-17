@@ -14,9 +14,9 @@ Rules kept: "up to" always on the 80-year line (mesh coating's tested life, neve
 
 ## 2. Proof layout (mobile order)
 **Page 1 (v2/)**
-1. Hero (plain 50/50 gabion | limestone split): brand → ★ 5.0 on Google · [review count] → headline → sub (WA homeowners, Josh's crew, 7-year workmanship warranty as the bonus) → Galfan-coated mesh proof line + [test data link] → GET MY QUOTE IN 2 DAYS → or call [phone] → *Conditions apply. (All in the first 412×780 screen.)
+1. Hero (plain 50/50 gabion | limestone split): brand → ★ 5.0 on Google → headline → sub (Perth and Bunbury homeowners, Josh's crew, 7-year workmanship warranty as the bonus) → Galfan-coated mesh proof line + [test data link] → GET MY QUOTE IN 2 DAYS → or call 0458 740 333 → *Conditions apply. (All in the first 412×780 screen.)
 2. 5.0 rating + promise-backing reviews: Ryan ("Quick response, accurate online quote"), Nasir ("Quicker than expected"), then Craig (longevity).
-3. Stat tiles: [walls built] · [years in business].
+3. Stat tiles: [walls built] · 50+ years combined experience.
 4. Why it lasts: competitor contrast (timber can rot, concrete can crack; rock-filled Galfan mesh drains and flexes) + [test data link].
 5. Before/after [photo] + [result testimonial: wall size, price, time to quote].
 6. Extra-mile story: Josh flew WA → Gympie QLD for Kristen (gate photo + her review).
@@ -24,7 +24,7 @@ Rules kept: "up to" always on the 80-year line (mesh coating's tested life, neve
 8. Final CTA + click-to-call.
 
 **Page 2 (v2-quiz/)**
-1. Brand + click-to-call → ★ 5.0 [review count] → Ryan + Nasir → CTA → $500 panel with terms summary (complete enquiry incl. photo, 2 business days, paid on acceptance, Conditions apply).
+1. Brand + click-to-call (0458 740 333) → ★ 5.0 average on Google → Ryan + Nasir → CTA → $500 panel with terms summary (complete enquiry incl. photo, 2 business days, paid on acceptance, Conditions apply).
 2. Quiz (plain split header): what are you after → wall type (gabion first) → size buckets + price-range anchor → details form.
 3. Below the quiz: "We go the extra mile" Kristen card + Craig + Emma.
 
@@ -33,7 +33,7 @@ Rules kept: "up to" always on the 80-year line (mesh coating's tested life, neve
 2. Wall type: Gabion / Limestone blocks / Quote me for both / Something else (→ details).
 3. How big is it? Height: Under 1 m · 1–1.5 m · 1.5–2 m · 2 m+ · Not sure. Length: Under 10 m · 10–20 m · 20–40 m · 40 m+ · Not sure. Both are required ("Not sure" counts). Anchor: "Most gabion walls land between [$ low] and [$ high] per metre, installed."
 4. Where do we send your quote? Full name* · Phone* ("So we can confirm details. No spam.") · Email* · Site suburb or postcode* · Site photo* ("Add a photo of the site and we'll quote faster", matching the terms' complete-enquiry rule) · Description (optional). Button: GET MY QUOTE IN 2 DAYS.
-5. Thank-you: name, promise line + Conditions apply → what happens next (3 steps) → more-photos prompt → Josh intro + [photo] → Call Josh [phone] → While you wait: [project gallery link].
+5. Thank-you: name, promise line + Conditions apply → what happens next (3 steps) → more-photos prompt → Josh intro + [photo] → Call Josh 0458 740 333 → While you wait: [project gallery link].
 
 Form behaviour is unchanged from faded-split (front end only, `preventDefault` → thank-you; nothing is wired to GHL). The height/length bucket picks are held in JS only. Map them to GHL fields when the automation is wired.
 Preview hook: `?step=size|details|done` opens a step directly.
@@ -51,18 +51,17 @@ Preview hook: `?step=size|details|done` opens a step directly.
 - Keep "Quote me for both" in the quiz for undecided buyers.
 
 ## 6. Placeholders (all need Josh's input)
+Filled 18 Oct 2026: phone 0458 740 333 (tel:+61458740333), email hello@gabionfabrication.com.au, service area "Perth and Bunbury regions", review count removed (shows "5.0 on Google"), "50+ years combined experience" tile.
+
+Still open:
 | Placeholder | Where |
 |---|---|
-| [PLACEHOLDER: review count] | v2 hero rating line, v2 reviews heading, v2-quiz rating line |
 | [PLACEHOLDER: See the test data link] (80-year test source, standard, conditions) | v2 hero proof line, v2 "Why it lasts" |
-| [PLACEHOLDER: phone] (tel: link is `tel:PLACEHOLDER`) | v2 hero + final CTA; v2-quiz top bar, thank-you steps, photo prompt, Call Josh button |
 | [PLACEHOLDER] walls built in WA | v2 stat tile |
-| [PLACEHOLDER] years in business | v2 stat tile |
 | [PLACEHOLDER: before/after photo] | v2 Before & after |
 | [PLACEHOLDER: result testimonial: wall size, price, time to quote] | v2 Before & after |
 | [PLACEHOLDER: $ low] / [PLACEHOLDER: $ high] per metre (gabion) | v2-quiz size step |
 | [PLACEHOLDER: Josh photo] | v2-quiz thank-you |
 | [PLACEHOLDER: project gallery link] (href="#") | v2-quiz thank-you |
-| Service area, phone, email | promise-terms (existing) |
 
 Copy for Josh to approve: the thank-you intro "G'day, I'm Josh. Thanks for reaching out. I'll look over your wall details and we'll have your quote to you within 2 business days." Also: the competitor-contrast line, and that the reviewer locations (Ryan, Nasir) are not stated. Brief asks for a local WA review to lead, so confirm which reviewers are WA and add suburbs.
