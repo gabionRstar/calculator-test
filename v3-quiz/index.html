@@ -65,6 +65,14 @@ h1 em{font-style:normal;color:var(--y)}h1 a{text-decoration:none;color:var(--y)}
 .dd select:focus{border-color:var(--y);box-shadow:0 0 0 4px rgba(240,187,41,.18)}
 .dd.has select{border-color:var(--y);background:rgba(240,187,41,.13);box-shadow:0 0 0 4px rgba(240,187,41,.12)}
 .dd.has .ok{opacity:1;transform:translateY(-50%) scale(1)}
+.pu{margin:0 0 6px}.pu-add{display:flex;align-items:center;gap:12px;border:2px dashed var(--y);border-radius:14px;padding:12px 14px;background:rgba(240,187,41,.06);cursor:pointer;position:relative}
+.pu-add input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%}
+.pu-cam{flex:0 0 auto;width:40px;height:40px;border-radius:50%;background:rgba(240,187,41,.16);color:var(--y);display:grid;place-items:center}.pu-cam svg{width:22px;height:22px}
+.pu-tx{flex:1;min-width:0}.pu-tx b{display:block;font-size:15px;font-weight:600;color:#fff}.pu-tx b em{font-style:normal;font-weight:400;color:#999}.pu-tx small{display:block;font-size:13px;color:#aaa;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pu-has{display:none;align-items:center;gap:12px;border:2px solid var(--y);border-radius:14px;padding:10px 12px;background:rgba(240,187,41,.1)}
+.pu-has img{flex:0 0 auto;width:52px;height:52px;border-radius:10px;object-fit:cover}
+.pu-rm{flex:0 0 auto;background:none;border:1px solid #555;color:#ddd;border-radius:10px;padding:8px 12px;font-size:13px}
+.pu.has .pu-add{display:none}.pu.has .pu-has{display:flex}
 /* inputs */
 .big{display:block;width:100%;font:600 22px Inter,sans-serif;padding:18px;border-radius:14px;border:2px solid var(--line);background:var(--card);color:#fff;outline:0}
 .big:focus,.fld input:focus,.fld textarea:focus{border-color:var(--y)}
@@ -98,7 +106,7 @@ h1 em{font-style:normal;color:var(--y)}h1 a{text-decoration:none;color:var(--y)}
 <div class="split"><i></i><i></i></div>
 <div class="rate"><span class="st">★★★★★</span><b>5.0</b> on Google</div>
 <h1>Quote in 2 days <em>or we pay you $500.<a href="../promise-terms/">*</a></em></h1>
-<p class="sub">Limestone and gabion walls for Perth and Bunbury homeowners. 7 quick questions.</p>
+<p class="sub">Limestone and gabion walls for Perth and Bunbury homeowners. 6 quick questions.</p>
 <button class="btn" type="button" onclick="go('what')">START MY QUOTE →</button>
 <div class="meta">*<a href="../promise-terms/">Conditions apply</a> · or call <a href="tel:+61458740333">0458 740 333</a></div>
 <div class="revs"><div class="rc"><div class="who"><img src="../quiz-plan/img/craig-dixon.jpg" alt="Craig Dixon"><div class="nm"><b>Craig Dixon · Western Australia</b><span class="gl">Google review</span></div><svg class="gg" viewBox="0 0 48 48" aria-label="Google"><use href="#glogo"/></svg></div><div class="rs"><span class="stars">★★★★★</span></div><q>“I can highly recommend the company if you're looking to build a wall that will last forever and looks bloody awesome 👌”</q></div><div class="rc"><div class="who"><div class="av" style="background:#0B8043">S</div><div class="nm"><b>Sarah Wilson</b><span class="gl">Google review</span></div><svg class="gg" viewBox="0 0 48 48" aria-label="Google"><use href="#glogo"/></svg></div><div class="rs"><span class="stars">★★★★★</span></div><q>“From the first point of contact, communication was quick and straightforward and his knowledge of the product was outstanding. Installation was seamless and they were very pet aware, Very pleased with end result. Highly recommend Josh and Monty for retaining and feature walls”</q></div></div>
@@ -127,36 +135,33 @@ h1 em{font-style:normal;color:var(--y)}h1 a{text-decoration:none;color:var(--y)}
 <label class="dd" id="dd-l"><select id="l" aria-label="Wall length" onchange="pickDD(this)"><option value="">Select length</option><option>1 m</option><option>2 m</option><option>3 m</option><option>4 m</option><option>5 m</option><option>6 m</option><option>7 m</option><option>8 m</option><option>9 m</option><option>10 m</option><option>11 m</option><option>12 m</option><option>13 m</option><option>14 m</option><option>15 m</option><option>16 m</option><option>17 m</option><option>18 m</option><option>19 m</option><option>20 m</option><option>21 m</option><option>22 m</option><option>23 m</option><option>24 m</option><option>25 m</option><option>26 m</option><option>27 m</option><option>28 m</option><option>29 m</option><option>30 m</option><option>31 m</option><option>32 m</option><option>33 m</option><option>34 m</option><option>35 m</option><option>36 m</option><option>37 m</option><option>38 m</option><option>39 m</option><option>40 m</option><option>41 m</option><option>42 m</option><option>43 m</option><option>44 m</option><option>45 m</option><option>46 m</option><option>47 m</option><option>48 m</option><option>49 m</option><option>50 m</option><option>50 m+</option><option>Not sure / custom size</option></select><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span><span class="ok">✓</span></label><div class="hint">One big step is roughly 1 m.</div><div class="anchor">Most walls land between <span class="ph">[PLACEHOLDER: $ low]</span> and <span class="ph">[PLACEHOLDER: $ high]</span> per metre, installed.</div><div class="foot"><button class="btn" id="b-l" type="button" disabled onclick="go('isize')">CONTINUE →</button></div>
 </section>
 
-<section class="scr ins" id="isize" data-s="4"><div class="badge">👍</div><h1>Got it. <em>Nearly there.</em></h1><p>Three quick steps and your quote is on its way: in 2 days or we pay you $500.<a href="../promise-terms/">*</a></p><div class="foot"><button class="btn" type="button" onclick="go('sub')">CONTINUE →</button></div></section>
+<section class="scr ins" id="isize" data-s="4"><div class="badge">👍</div><h1>Got it. <em>Nearly there.</em></h1><p>Two quick steps and your quote is on its way: in 2 days or we pay you $500.<a href="../promise-terms/">*</a></p><div class="foot"><button class="btn" type="button" onclick="go('sub')">CONTINUE →</button></div></section>
 
 <section class="scr" id="sub" data-s="5"><h1>Where’s the wall?</h1><p class="sub">Suburb or postcode.</p>
-<input class="big" id="suburb" autocomplete="postal-code" placeholder="e.g. Joondalup or 6027" oninput="sbtn.disabled=!this.value.trim()" onkeydown="if(event.key==='Enter'&&this.value.trim())go('photo')">
+<input class="big" id="suburb" autocomplete="postal-code" placeholder="e.g. Joondalup or 6027" oninput="sbtn.disabled=!this.value.trim()" onkeydown="if(event.key==='Enter'&&this.value.trim())go('contact')">
 <div class="hint">We build across the Perth and Bunbury regions.</div>
-<div class="foot"><button class="btn" id="sbtn" type="button" disabled onclick="go('photo')">CONTINUE →</button></div></section>
+<div class="foot"><button class="btn" id="sbtn" type="button" disabled onclick="go('contact')">CONTINUE →</button></div></section>
 
-<section class="scr" id="photo" data-s="6"><h1>Add a photo <em>and we’ll quote faster</em></h1><p class="sub">One photo of the site is enough to start the 2-day clock.</p>
-<label class="up" id="up"><input type="file" accept="image/*" id="pic"><span class="cam"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></span><img class="pv" id="pv" alt="Your site photo"><b id="upb">Tap to add a site photo</b><span id="ups">Take one now or choose from your phone</span></label>
-<div class="foot"><button class="btn" id="pbtn" type="button" disabled onclick="go('contact')">CONTINUE →</button></div></section>
-
-<section class="scr" id="contact" data-s="7"><h1>Where do we send <em>your quote?</em></h1><p class="sub">Last step.</p>
+<section class="scr" id="contact" data-s="6"><h1>Where do we send <em>your quote?</em></h1><p class="sub">Last step.</p>
 <form id="f">
 <label class="fld">Full name<input required id="nm" autocomplete="name" placeholder="Jane Smith"></label>
 <label class="fld">Phone<span class="hint" style="display:block">So we can confirm details. No spam.</span><input required type="tel" autocomplete="tel" placeholder="04XX XXX XXX"></label>
 <label class="fld">Email<input required type="email" autocomplete="email" placeholder="you@example.com"></label>
 <label class="fld">Anything we should know? <em>(optional)</em><textarea rows="2" placeholder="Slope, access, existing wall…"></textarea></label>
+<div class="pu" id="pu"><label class="pu-add" id="pu-add"><input type="file" accept="image/*" id="pic"><span class="pu-cam"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></span><span class="pu-tx"><b>Add a site photo <em>(optional)</em></b><small>Helps us quote faster.</small></span></label><div class="pu-has" id="pu-has"><img id="pv" alt="Your site photo"><span class="pu-tx"><b>Photo added ✓</b><small id="pu-name"></small></span><button type="button" class="pu-rm" id="pu-rm" aria-label="Remove photo">Remove</button></div></div>
 <div class="foot"><button class="btn" type="submit">GET MY QUOTE IN 2 DAYS →</button><div class="promise">In 2 days or we pay you $500.* <a href="../promise-terms/">Conditions apply</a></div></div>
 </form></section>
 
 <section class="scr" id="thanks"><div class="done">✓</div><h1>Thanks<span id="tn"></span> – you’re in!</h1><p class="sub">Your quote in 2 days or we pay you $500.<a href="../promise-terms/" style="color:var(--y);text-decoration:none">*</a> <a href="../promise-terms/" style="color:var(--y);font-size:13px">Conditions apply</a></p>
-<ol class="next"><li><span>We look over your wall details and site photo.</span></li><li><span>We may call or text you from <a href="tel:+61458740333" style="color:var(--y);font-weight:600">0458 740 333</a> to confirm a few details.</span></li><li><span>Your written quote arrives by email or SMS within 2 business days.</span></li></ol>
-<div class="card"><h3>📷 Got more photos?</h3><p>Different angles, slopes and access points help us quote faster. Text them to <a href="tel:+61458740333" style="color:var(--y);font-weight:600">0458 740 333</a> or reply to our email.</p></div>
+<ol class="next"><li><span>We look over your wall details (and photo, if you added one).</span></li><li><span>We may call or text you from <a href="tel:+61458740333" style="color:var(--y);font-weight:600">0458 740 333</a> to confirm a few details.</span></li><li><span>Your written quote arrives by email or SMS within 2 business days.</span></li></ol>
+<div class="card"><h3>📷 Got photos of the site?</h3><p>Different angles, slopes and access points help us quote faster. Text them to <a href="tel:+61458740333" style="color:var(--y);font-weight:600">0458 740 333</a> or reply to our email.</p></div>
 <div class="card josh"><div class="pp">[PLACEHOLDER: Josh photo]</div><div><h3>G’day, I’m Josh</h3><p>Thanks for reaching out. I’ll look over your wall details and we’ll have your quote to you within 2 business days.</p></div></div>
 <a class="callbtn" href="tel:+61458740333">📞 Call Josh: 0458 740 333</a>
 <a class="lnk" href="#">While you wait: see our recent walls → <span class="ph">[PLACEHOLDER: project gallery link]</span></a>
 </section>
 </div>
 <script>
-const N=7,app=document.getElementById('app');let hist=[],cur='start';const ans={};
+const N=6,app=document.getElementById('app');let hist=[],cur='start';const ans={};
 const TYPE=({gabion:'gabion',limestone:'limestone'})[new URLSearchParams(location.search).get('type')]||'';if(TYPE)ans.type=TYPE;
 const COPY={gabion:['Great choice.','Gabion walls built to last up to 80 years. Galfan-coated mesh, rated over 80 years in mild conditions by the BBA.'],
 limestone:['Great choice.','Engineered limestone block walls, built by Josh’s crew and backed by our 7-year workmanship warranty.'],
@@ -174,7 +179,8 @@ b.parentElement.querySelectorAll('.opt').forEach(o=>o.classList.remove('sel'));b
 b.dataset.busy=1;setTimeout(()=>{delete b.dataset.busy;go(b.dataset.next)},350);});
 function pickDD(el){const ok=!!el.value;el.classList.toggle('empty',!ok);el.closest('.dd').classList.toggle('has',ok);document.getElementById('b-'+el.id).disabled=!ok;ans[el.id==='h'?'height':'length']=el.value;}
 document.querySelectorAll('.dd select').forEach(el=>el.classList.add('empty'));
-const pic=document.getElementById('pic');pic.addEventListener('change',()=>{const f=pic.files[0];if(!f)return;const pv=document.getElementById('pv');pv.src=URL.createObjectURL(f);document.getElementById('up').classList.add('has');document.getElementById('upb').textContent='Photo added ✓';document.getElementById('ups').textContent='Tap to change it';document.getElementById('pbtn').disabled=false;});
+const pic=document.getElementById('pic'),pu=document.getElementById('pu');pic.addEventListener('change',()=>{const f=pic.files[0];if(!f)return;document.getElementById('pv').src=URL.createObjectURL(f);document.getElementById('pu-name').textContent=f.name;pu.classList.add('has');ans.photo=f.name;});
+document.getElementById('pu-rm').addEventListener('click',()=>{pic.value='';pu.classList.remove('has');document.getElementById('pv').removeAttribute('src');delete ans.photo;});
 document.getElementById('f').addEventListener('submit',e=>{e.preventDefault();const n=(document.getElementById('nm').value||'').trim().split(' ')[0];document.getElementById('tn').textContent=n?', '+n:'';hist=[];show('thanks');});
 // preview hooks: ?step=<screen id>&sel=<option index> (for screenshots only)
 const q=new URLSearchParams(location.search),st=q.get('step');if(st&&document.getElementById(st)){if(st==='itype'&&!ans.type)ans.type='gabion';hist=['start'];show(st);const si=q.get('sel');if(si!==null){const sc=document.getElementById(st),dd=sc.querySelector('.dd select');if(dd){dd.selectedIndex=+si;pickDD(dd);}else{const o=sc.querySelectorAll('.opt')[+si];if(o)o.classList.add('sel');}}}
