@@ -14,10 +14,10 @@ Rules kept: "up to" always on the 80-year line (mesh coating's tested life, neve
 
 ## 2. Proof layout (mobile order)
 **Page 1 (v2/)**
-1. Hero (plain 50/50 gabion | limestone split): brand → ★ 5.0 on Google → headline → sub (Perth and Bunbury homeowners, Josh's crew, 7-year workmanship warranty as the bonus) → Galfan-coated mesh proof line + [test data link] → GET MY QUOTE IN 2 DAYS → or call 0458 740 333 → *Conditions apply. (All in the first 412×780 screen.)
+1. Hero (plain 50/50 gabion | limestone split): brand → ★ 5.0 on Google → headline → sub (Perth and Bunbury homeowners, Josh's crew, 7-year workmanship warranty as the bonus) → Galfan-coated mesh proof line + BBA certificate link → GET MY QUOTE IN 2 DAYS → or call 0458 740 333 → *Conditions apply. (All in the first 412×780 screen.)
 2. 5.0 rating + promise-backing reviews: Ryan ("Quick response, accurate online quote"), Nasir ("Quicker than expected"), then Craig (longevity).
 3. Stat tiles: [walls built] · 50+ years combined experience.
-4. Why it lasts: competitor contrast (timber can rot, concrete can crack; rock-filled Galfan mesh drains and flexes) + [test data link].
+4. Why it lasts: competitor contrast (timber can rot, concrete can crack; rock-filled Galfan mesh drains and flexes) + BBA certificate link.
 5. Before/after [photo] + [result testimonial: wall size, price, time to quote].
 6. Extra-mile story: Josh flew WA → Gympie QLD for Kristen (gate photo + her review).
 7. Solid yellow $500 panel with a one-line summary of the terms + Conditions apply.
@@ -51,12 +51,11 @@ Preview hook: `?step=size|details|done` opens a step directly.
 - Keep "Quote me for both" in the quiz for undecided buyers.
 
 ## 6. Placeholders (all need Josh's input)
-Filled 18 Oct 2026: phone 0458 740 333 (tel:+61458740333), email hello@gabionfabrication.com.au, service area "Perth and Bunbury regions", review count removed (shows "5.0 on Google"), "50+ years combined experience" tile.
+Filled 18 Oct 2026: phone 0458 740 333 (tel:+61458740333), email hello@gabionfabrication.com.au, service area "Perth and Bunbury regions", review count removed (shows "5.0 on Google"), "50+ years combined experience" tile, 80-year proof now links to the BBA certificate (https://cdn.shopify.com/s/files/1/0792/8630/5003/files/BBA_Certificate_-_Welded_Mesh_2.pdf?v=1787745102); proof line reads "Galfan-coated mesh, rated over 80 years in mild conditions by the British Board of Agrément (BBA)." Note: the certificate (holder Link Middle East Ltd) gives >80 years for Galfan in mild conditions for 4.0–5.0 mm wire (>70 years for 3.0 mm), Table 3. Confirm the supplied mesh matches.
 
 Still open:
 | Placeholder | Where |
 |---|---|
-| [PLACEHOLDER: See the test data link] (80-year test source, standard, conditions) | v2 hero proof line, v2 "Why it lasts" |
 | [PLACEHOLDER] walls built in WA | v2 stat tile |
 | [PLACEHOLDER: before/after photo] | v2 Before & after |
 | [PLACEHOLDER: result testimonial: wall size, price, time to quote] | v2 Before & after |
