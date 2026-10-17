@@ -14,24 +14,25 @@ Rules kept: "up to" always on the 80-year line (mesh coating's tested life, neve
 
 ## 2. Proof layout (mobile order)
 **Page 1 (v2/)**
-1. Hero (plain 50/50 gabion | limestone split): brand → ★ 5.0 on Google → headline → sub (Perth and Bunbury homeowners, Josh's crew, 7-year workmanship warranty as the bonus) → Galfan-coated mesh proof line + BBA certificate link → GET MY QUOTE IN 2 DAYS → or call 0458 740 333 → *Conditions apply. (All in the first 412×780 screen.)
+1. Hero (plain 50/50 gabion | limestone split): brand → ★ 5.0 on Google → headline → sub ("Gabion and limestone retaining walls for Perth and Bunbury homeowners", Josh's crew, 7-year workmanship warranty as the bonus) → Galfan-coated mesh proof line + BBA certificate link → GET MY QUOTE IN 2 DAYS → or call 0458 740 333 → *Conditions apply. (All in the first 412×780 screen.)
 2. 5.0 rating + promise-backing reviews: Craig Dixon (Western Australia, lead local review), then Sarah Wilson (communication, product knowledge, seamless install), then Ryan ("Quick response, accurate online quote"), then Nasir ("Quicker than expected").
 3. Stat tiles: [walls built] · 50+ years combined experience.
-4. Why it lasts: competitor contrast (timber can rot, concrete can crack; rock-filled Galfan mesh drains and flexes) + BBA certificate link.
-5. Before/after [photo] + [result testimonial: wall size, price, time to quote].
-6. Extra-mile story: Josh flew WA → Gympie QLD for Kristen (gate photo + her review).
-7. Solid yellow $500 panel with a one-line summary of the terms + Conditions apply.
-8. Final CTA + click-to-call.
+4. Two ways to build it: Gabion card (Galfan-coated mesh, up to 80 years (BBA) · Modern rock look · Drains freely → ../v2-quiz/?type=gabion) and Limestone card (Engineered limestone block walls · Classic Perth look · Built by Josh's crew · Backed by our 7-year workmanship warranty → ../v2-quiz/?type=limestone). No limestone lifespan, stats or prices claimed.
+5. Why gabion lasts: "Timber sleepers can rot." + Galfan mesh drains/flexes + BBA rating + certificate link. ("Concrete can crack" removed so nothing reads as a knock on limestone.)
+6. Before/after [photo] + [result testimonial: wall size, price, time to quote].
+7. Extra-mile story: Josh flew WA → Gympie QLD for Kristen (gate photo + her review).
+8. Solid yellow $500 panel with a one-line summary of the terms + Conditions apply.
+9. Final CTA + click-to-call.
 
 **Page 2 (v2-quiz/)**
-1. Brand + click-to-call (0458 740 333) → ★ 5.0 average on Google → Craig (WA) + Sarah + Ryan + Nasir → CTA → $500 panel with terms summary (complete enquiry incl. photo, 2 business days, paid on acceptance, Conditions apply).
+1. Brand + click-to-call (0458 740 333) → ★ 5.0 average on Google → Craig (WA) + Sarah → CTA → $500 panel with terms summary (complete enquiry incl. photo, 2 business days, paid on acceptance, Conditions apply) → Ryan + Nasir.
 2. Quiz (plain split header): what are you after → wall type (gabion first) → size buckets + price-range anchor → details form.
 3. Below the quiz: "We go the extra mile" Kristen card + Emma.
 
 ## 3. Quiz flow
 1. What are you after? Retaining wall / Freestanding wall / Something else (→ details).
 2. Wall type: Gabion / Limestone blocks / Quote me for both / Something else (→ details).
-3. How big is it? Height: Under 1 m · 1–1.5 m · 1.5–2 m · 2 m+ · Not sure. Length: Under 10 m · 10–20 m · 20–40 m · 40 m+ · Not sure. Both are required ("Not sure" counts). Anchor: "Most gabion walls land between [$ low] and [$ high] per metre, installed."
+3. How big is it? Height: Under 1 m · 1–1.5 m · 1.5–2 m · 2 m+ · Not sure. Length: Under 10 m · 10–20 m · 20–40 m · 40 m+ · Not sure. Both are required ("Not sure" counts). Anchor: "Most walls land between [$ low] and [$ high] per metre, installed."
 4. Where do we send your quote? Full name* · Phone* ("So we can confirm details. No spam.") · Email* · Site suburb or postcode* · Site photo* ("Add a photo of the site and we'll quote faster", matching the terms' complete-enquiry rule) · Description (optional). Button: GET MY QUOTE IN 2 DAYS.
 5. Thank-you: name, promise line + Conditions apply → what happens next (3 steps) → more-photos prompt → Josh intro + [photo] → Call Josh 0458 740 333 → While you wait: [project gallery link].
 
@@ -47,7 +48,7 @@ Preview hook: `?step=size|details|done` opens a step directly.
 - Keep `v2/` as the **gabion** page (80-year Galfan mesh angle, gabion photos and reviews).
 - Clone it as `v2-limestone/` with its own headline (e.g. "Engineered limestone retaining walls. Quote in 2 days or we pay you $500.*"), limestone photos, limestone proof (no 80-year mesh claim on that page), and its own price anchor.
 - Split at the ad level: separate ad sets with gabion vs limestone creative and audiences, each pointing at its own page, so CPL and quality can be compared per offer.
-- Send limestone traffic to `v2-quiz/?type=limestone` (to build: pre-select the wall type and skip step 2) so both pages share one form and one CRM pipeline.
+- Send limestone traffic to `v2-quiz/?type=limestone` (built: `?type=gabion` / `?type=limestone` pre-selects the wall type and skips step 2) so both pages share one form and one CRM pipeline.
 - Keep "Quote me for both" in the quiz for undecided buyers.
 
 ## 6. Placeholders (all need Josh's input)
@@ -63,4 +64,4 @@ Still open:
 | [PLACEHOLDER: Josh photo] | v2-quiz thank-you |
 | [PLACEHOLDER: project gallery link] (href="#") | v2-quiz thank-you |
 
-Copy for Josh to approve: the thank-you intro "G'day, I'm Josh. Thanks for reaching out. I'll look over your wall details and we'll have your quote to you within 2 business days." Also: the competitor-contrast line.
+Copy for Josh to approve: the thank-you intro "G'day, I'm Josh. Thanks for reaching out. I'll look over your wall details and we'll have your quote to you within 2 business days." Also: the timber contrast line.

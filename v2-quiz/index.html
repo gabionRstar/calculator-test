@@ -75,7 +75,7 @@ select,input,textarea{background:#1f1f1f;border:1px solid #3a3a3a;color:#fff}.co
 <section class="step" id="size" data-n="3"><h1>How big is it?</h1><p class="sub">Rough is fine – we confirm on site.</p>
 <div class="gh">Wall height</div><div class="chips" data-g="h"><button type="button" class="chip">Under 1 m</button><button type="button" class="chip">1–1.5 m</button><button type="button" class="chip">1.5–2 m</button><button type="button" class="chip">2 m+</button><button type="button" class="chip">Not sure</button></div>
 <div class="gh">Wall length</div><div class="chips" data-g="l"><button type="button" class="chip">Under 10 m</button><button type="button" class="chip">10–20 m</button><button type="button" class="chip">20–40 m</button><button type="button" class="chip">40 m+</button><button type="button" class="chip">Not sure</button></div>
-<div class="anchor">Most gabion walls land between <span class="ph">[PLACEHOLDER: $ low]</span> and <span class="ph">[PLACEHOLDER: $ high]</span> per metre, installed.</div>
+<div class="anchor">Most walls land between <span class="ph">[PLACEHOLDER: $ low]</span> and <span class="ph">[PLACEHOLDER: $ high]</span> per metre, installed.</div>
 <button class="primary" data-next="details" data-check="size">Continue</button></section>
 <section class="step" id="details" data-n="4"><h1>Where do we send your quote?</h1><p class="sub">Your quote in 2 days or we pay you $500.<a href="../promise-terms/" style="color:#FFCB00;text-decoration:none">*</a> <a href="../promise-terms/" style="color:#FFCB00;font-size:13px">Conditions apply</a></p>
 <form id="f"><label class="fl">Full name *<input required id="nm" autocomplete="name" placeholder="Jane Smith"></label>
@@ -104,11 +104,11 @@ document.querySelectorAll('.bar i').forEach(b=>b.style.width=(id==='thanks'?100:
 document.querySelectorAll('.count').forEach(c=>c.textContent=id==='thanks'?'Done':'Step '+p+' of '+N);
 document.querySelectorAll('.back').forEach(b=>b.style.visibility=hist.length&&id!=='thanks'?'visible':'hidden');
 if(!reset&&!ns)document.getElementById("quiz").scrollIntoView();}
-const pick={};
+const pick={};const TYPE=({gabion:'Gabion',limestone:'Limestone blocks'})[new URLSearchParams(location.search).get('type')]||'';if(TYPE)pick.type=TYPE;
 document.addEventListener('click',e=>{const c=e.target.closest('.chip');if(c){const g=c.parentElement;g.querySelectorAll('.chip').forEach(x=>x.classList.remove('sel'));c.classList.add('sel');pick[g.dataset.g]=c.textContent;return;}
 const b=e.target.closest('[data-next]');if(!b)return;
 if(b.dataset.check==='size'){if(!pick.h||!pick.l){alert('Pick a height and a length (“Not sure” is fine).');return;}}
-b.parentElement.querySelectorAll('.choice').forEach(c=>c.classList.remove('sel'));b.classList.add('sel');setTimeout(()=>go(b.dataset.next),b.classList.contains('choice')?180:0);});
+b.parentElement.querySelectorAll('.choice').forEach(c=>c.classList.remove('sel'));b.classList.add('sel');const nx=(TYPE&&b.dataset.next==='q2')?'size':b.dataset.next;setTimeout(()=>go(nx),b.classList.contains('choice')?180:0);});
 document.getElementById('f').addEventListener('submit',e=>{e.preventDefault();const n=(document.getElementById('nm').value||'').trim().split(' ')[0];document.getElementById('tn').textContent=n?', '+n:'';go('thanks')});
 function back(){const p=hist.pop();if(p){go(p);hist.pop();}}go('q1',true);document.querySelectorAll('.cta').forEach(a=>a.onclick=e=>{e.preventDefault();quiz.scrollIntoView({behavior:'smooth'})});
 const st=new URLSearchParams(location.search).get('step');if(st==='done')go('thanks',0,1);else if(st&&document.getElementById(st))go(st,0,1);
