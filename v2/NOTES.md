@@ -15,7 +15,7 @@ Rules kept: "up to" always on the 80-year line (mesh coating's tested life, neve
 ## 2. Proof layout (mobile order)
 **Page 1 (v2/)**
 1. Hero (plain 50/50 gabion | limestone split): brand → ★ 5.0 on Google → headline → sub (Perth and Bunbury homeowners, Josh's crew, 7-year workmanship warranty as the bonus) → Galfan-coated mesh proof line + BBA certificate link → GET MY QUOTE IN 2 DAYS → or call 0458 740 333 → *Conditions apply. (All in the first 412×780 screen.)
-2. 5.0 rating + promise-backing reviews: Ryan ("Quick response, accurate online quote"), Nasir ("Quicker than expected"), then Craig (longevity).
+2. 5.0 rating + promise-backing reviews: Craig Dixon (Western Australia, lead local review), then Ryan ("Quick response, accurate online quote"), then Nasir ("Quicker than expected").
 3. Stat tiles: [walls built] · 50+ years combined experience.
 4. Why it lasts: competitor contrast (timber can rot, concrete can crack; rock-filled Galfan mesh drains and flexes) + BBA certificate link.
 5. Before/after [photo] + [result testimonial: wall size, price, time to quote].
@@ -24,9 +24,9 @@ Rules kept: "up to" always on the 80-year line (mesh coating's tested life, neve
 8. Final CTA + click-to-call.
 
 **Page 2 (v2-quiz/)**
-1. Brand + click-to-call (0458 740 333) → ★ 5.0 average on Google → Ryan + Nasir → CTA → $500 panel with terms summary (complete enquiry incl. photo, 2 business days, paid on acceptance, Conditions apply).
+1. Brand + click-to-call (0458 740 333) → ★ 5.0 average on Google → Craig (WA) + Ryan + Nasir → CTA → $500 panel with terms summary (complete enquiry incl. photo, 2 business days, paid on acceptance, Conditions apply).
 2. Quiz (plain split header): what are you after → wall type (gabion first) → size buckets + price-range anchor → details form.
-3. Below the quiz: "We go the extra mile" Kristen card + Craig + Emma.
+3. Below the quiz: "We go the extra mile" Kristen card + Emma.
 
 ## 3. Quiz flow
 1. What are you after? Retaining wall / Freestanding wall / Something else (→ details).
@@ -63,4 +63,4 @@ Still open:
 | [PLACEHOLDER: Josh photo] | v2-quiz thank-you |
 | [PLACEHOLDER: project gallery link] (href="#") | v2-quiz thank-you |
 
-Copy for Josh to approve: the thank-you intro "G'day, I'm Josh. Thanks for reaching out. I'll look over your wall details and we'll have your quote to you within 2 business days." Also: the competitor-contrast line, and that the reviewer locations (Ryan, Nasir) are not stated. Brief asks for a local WA review to lead, so confirm which reviewers are WA and add suburbs.
+Copy for Josh to approve: the thank-you intro "G'day, I'm Josh. Thanks for reaching out. I'll look over your wall details and we'll have your quote to you within 2 business days." Also: the competitor-contrast line.
