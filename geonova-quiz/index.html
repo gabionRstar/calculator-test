@@ -1,0 +1,187 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Geonova Group | Start my quote</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="../geonova/logo-icon.png"><link rel="apple-touch-icon" href="../geonova/apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><style>
+:root{--y:#F0BB29;--bg:#141414;--card:#1e1e1e;--line:#333}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html,body{margin:0;background:var(--bg);color:#f2f2f2;font-family:Inter,sans-serif;line-height:1.45}
+button{font:inherit;cursor:pointer}a{color:inherit}
+.app{max-width:480px;margin:0 auto;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;overflow-x:hidden}
+/* top bar */
+.top{position:sticky;top:0;z-index:5;background:var(--bg);padding:12px 18px 10px;display:none}
+.app.inq .top{display:block}
+.tr{display:flex;align-items:center;justify-content:space-between;height:32px}
+.bk{background:none;border:0;color:#fff;font-size:22px;width:36px;height:32px;padding:0;text-align:left}
+.tr img{height:15px;width:auto}
+.cnt{font-size:13px;color:#aaa;width:36px;text-align:right;white-space:nowrap}
+.pb{height:4px;background:#2b2b2b;border-radius:4px;margin-top:10px;overflow:hidden}.pb i{display:block;height:100%;width:0;background:var(--y);border-radius:4px;transition:width .35s ease}
+/* screens */
+.scr{display:none;flex:1;flex-direction:column;padding:14px 20px 24px}
+.scr.on{display:flex}
+.scr.fwd{animation:inR .32s cubic-bezier(.2,.7,.2,1)}.scr.rev{animation:inL .32s cubic-bezier(.2,.7,.2,1)}
+@keyframes inR{from{opacity:0;transform:translateX(42px)}}@keyframes inL{from{opacity:0;transform:translateX(-42px)}}
+h1{font-family:Anton,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.3px;line-height:1.08;font-size:32px;margin:10px 0 8px}
+h1 em{font-style:normal;color:var(--y)}h1 a{text-decoration:none;color:var(--y)}
+.sub{margin:0 0 18px;color:#bbb;font-size:15px}
+/* options */
+.opts{display:grid;gap:12px}
+.opt{display:flex;align-items:center;gap:14px;width:100%;min-height:76px;padding:10px 14px 10px 10px;border:2px solid var(--line);border-radius:16px;background:var(--card);color:#fff;text-align:left;transition:transform .18s,border-color .18s,background .18s}
+.opt:active{transform:scale(.99)}
+.opt .th{flex:0 0 auto;width:56px;height:56px;border-radius:11px;background:#2a2a2a center/cover;display:grid;place-items:center;color:var(--y)}
+.opt .th svg{width:30px;height:30px}
+.opt .tx{flex:1;min-width:0}.opt .tx b{display:block;font-size:17px;font-weight:600}.opt .tx small{display:block;color:#9a9a9a;font-size:13px;margin-top:2px}
+.opt .ck{flex:0 0 auto;width:26px;height:26px;border-radius:50%;border:2px solid #555;display:grid;place-items:center;color:#111;font-size:15px;font-weight:700;transition:.18s}
+.opt.sel{border-color:var(--y);background:rgba(240,187,41,.13);transform:scale(1.02)}
+.opt.sel .ck{background:var(--y);border-color:var(--y)}.opt.sel .ck::after{content:"✓"}
+/* buttons */
+.btn{display:block;width:100%;padding:17px;border:0;border-radius:14px;background:var(--y);color:#111;font-weight:700;font-size:18px;text-align:center;text-decoration:none;box-shadow:0 6px 20px rgba(240,187,41,.3);transition:opacity .2s}
+.btn:disabled{opacity:.35;box-shadow:none}
+.foot{margin-top:auto;padding-top:20px;position:sticky;bottom:0;background:linear-gradient(0deg,var(--bg) 70%,rgba(20,20,20,0));padding-bottom:6px}
+/* start */
+#start{padding-top:18px;text-align:center}
+#start .logo{width:230px;margin:0 auto}
+.split{display:flex;height:170px;border-radius:16px;overflow:hidden;margin:16px 0 14px}.split i{flex:1;background:url(../quiz-plan/img/gabion-retaining.jpg) center 60%/cover}.split i+i{background-image:url(../v2/limestone-wall.jpg);background-position:center}
+.rate{font-size:14px;color:#ddd}.rate .st{color:#FBBC04;letter-spacing:1px;margin-right:4px}.rate b{color:#fff}
+#start h1{font-size:38px;margin:10px 0 8px}
+#start .sub{margin-bottom:18px}
+.meta{font-size:13px;color:#aaa;margin-top:12px}.meta a{color:#ddd}
+.revs{display:grid;gap:12px;margin-top:26px;text-align:left}
+.rc{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px}
+.who{display:flex;gap:12px;align-items:center}.who img,.who .av{flex:0 0 auto;width:44px;height:44px;max-width:none;aspect-ratio:1/1;border-radius:50%;object-fit:cover}.av{display:grid;place-items:center;color:#fff;font:500 18px/1 Roboto,Arial,sans-serif}
+.who .nm{flex:1 1 auto;min-width:0}.who .nm b{display:block;font-size:15px;font-weight:600;color:#f1f1f1;overflow-wrap:anywhere}.gl{display:block;font-size:12px;color:#9aa0a6}.gg{width:20px;height:20px;flex:0 0 auto}
+.rs{margin-top:10px}.rs .stars{color:#FBBC04;font-size:15px;letter-spacing:1px}
+.rc q{display:block;font-size:15px;color:#e8eaed;margin:8px 0 0;line-height:1.5;quotes:none}
+/* interstitial */
+.ins{justify-content:center;text-align:center}
+.ins .badge{width:84px;height:84px;border-radius:50%;background:rgba(240,187,41,.15);border:2px solid var(--y);display:grid;place-items:center;margin:0 auto 18px;color:var(--y);font-size:38px}
+.ins h1{font-size:34px}.ins p{color:#ccc;font-size:16px;margin:0 auto 10px;max-width:360px}.ins p a{color:var(--y)}
+.ins .foot{position:static;background:none}.ins .badge{margin-top:auto}
+/* drop-downs */
+.dd{position:relative;display:block}
+.dd select{appearance:none;-webkit-appearance:none;display:block;width:100%;font:500 18px Inter,sans-serif;color:#fff;background:var(--card);border:2px solid var(--line);border-radius:16px;padding:20px 84px 20px 18px;min-height:68px;outline:0;transition:border-color .18s,box-shadow .18s,background .18s}
+.dd select:invalid,.dd select.empty{color:#8a8a8a}
+.dd select option{color:#fff;background:#1e1e1e}
+.dd .chev{position:absolute;right:16px;top:50%;transform:translateY(-50%);width:26px;height:26px;color:var(--y);pointer-events:none}.dd .chev svg{width:26px;height:26px}
+.dd .ok{position:absolute;right:50px;top:50%;transform:translateY(-50%) scale(.6);width:26px;height:26px;border-radius:50%;background:var(--y);color:#111;font-weight:700;font-size:15px;display:grid;place-items:center;opacity:0;transition:.18s;pointer-events:none}
+.dd select:focus{border-color:var(--y);box-shadow:0 0 0 4px rgba(240,187,41,.18)}
+.dd.has select{border-color:var(--y);background:rgba(240,187,41,.13);box-shadow:0 0 0 4px rgba(240,187,41,.12)}
+.dd.has .ok{opacity:1;transform:translateY(-50%) scale(1)}
+.pu{margin:0 0 6px}.pu-add{display:flex;align-items:center;gap:12px;border:2px dashed var(--y);border-radius:14px;padding:12px 14px;background:rgba(240,187,41,.06);cursor:pointer;position:relative}
+.pu-add input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%}
+.pu-cam{flex:0 0 auto;width:40px;height:40px;border-radius:50%;background:rgba(240,187,41,.16);color:var(--y);display:grid;place-items:center}.pu-cam svg{width:22px;height:22px}
+.pu-tx{flex:1;min-width:0}.pu-tx b{display:block;font-size:15px;font-weight:600;color:#fff}.pu-tx b em{font-style:normal;font-weight:400;color:#999}.pu-tx small{display:block;font-size:13px;color:#aaa;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pu-has{display:none;align-items:center;gap:12px;border:2px solid var(--y);border-radius:14px;padding:10px 12px;background:rgba(240,187,41,.1)}
+.pu-has img{flex:0 0 auto;width:52px;height:52px;border-radius:10px;object-fit:cover}
+.pu-rm{flex:0 0 auto;background:none;border:1px solid #555;color:#ddd;border-radius:10px;padding:8px 12px;font-size:13px}
+.pu.has .pu-add{display:none}.pu.has .pu-has{display:flex}
+/* inputs */
+.big{display:block;width:100%;font:600 22px Inter,sans-serif;padding:18px;border-radius:14px;border:2px solid var(--line);background:var(--card);color:#fff;outline:0}
+.big:focus,.fld input:focus,.fld textarea:focus{border-color:var(--y)}
+.hint{font-size:13px;color:#9a9a9a;margin-top:10px}
+.anchor{background:var(--card);border-left:3px solid var(--y);border-radius:8px;padding:12px 14px;font-size:14px;color:#ddd;margin-top:16px}
+.ph{color:var(--y);font-weight:600}
+.up{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:8px;min-height:250px;border:2px dashed var(--y);border-radius:18px;background:rgba(240,187,41,.07);padding:22px;cursor:pointer;position:relative;overflow:hidden}
+.up input{position:absolute;inset:0;opacity:0;cursor:pointer}
+.up .cam{width:64px;height:64px;border-radius:50%;background:var(--y);color:#111;display:grid;place-items:center}.up .cam svg{width:32px;height:32px}
+.up b{font-size:18px}.up span{font-size:14px;color:#ccc}
+.up.has{border-style:solid;background:#1d1a0d}.up img.pv{max-width:100%;max-height:170px;border-radius:12px;display:none}.up.has img.pv{display:block}.up.has .cam{display:none}
+.fld{display:block;font-weight:600;font-size:14px;margin:0 0 14px}.fld em{font-weight:400;color:#999;font-style:normal}
+.fld input,.fld textarea{display:block;width:100%;margin-top:6px;font:inherit;font-size:17px;padding:14px;border-radius:12px;border:2px solid var(--line);background:var(--card);color:#fff;outline:0}
+.fld .hint{margin:4px 0 0;font-weight:400}
+.promise{font-size:13px;color:#bbb;text-align:center;margin-top:10px}.promise a{color:var(--y)}
+/* thanks (from v2-quiz) */
+.done{width:64px;height:64px;border-radius:50%;background:var(--y);color:#111;display:grid;place-items:center;font-size:32px;font-weight:700;margin:20px 0 6px}
+.next{list-style:none;padding:0;margin:18px 0;display:grid;gap:12px;counter-reset:n}.next li{display:flex;gap:12px;font-size:15px;color:#e2e2e2}.next li::before{counter-increment:n;content:counter(n);flex:none;width:28px;height:28px;border-radius:50%;background:var(--y);color:#111;font-weight:700;display:grid;place-items:center;font-size:14px}
+.card{background:var(--card);border:1px solid #2e2e2e;border-radius:14px;padding:16px;margin:14px 0}.card h3{margin:0 0 6px;font-size:16px}.card p{margin:0;font-size:14px;color:#ccc}
+.josh{display:flex;gap:14px;align-items:center}.josh .pp{flex:none;width:64px;height:64px;border-radius:50%;border:2px dashed var(--y);display:grid;place-items:center;font-size:9px;line-height:1.2;text-align:center;color:var(--y);padding:6px}
+.callbtn{display:block;text-align:center;background:var(--y);color:#111;font-weight:700;border-radius:12px;padding:14px;text-decoration:none;margin-top:12px}
+.lnk{display:block;text-align:center;border:1px solid #444;border-radius:12px;padding:13px;color:#fff;text-decoration:none;margin-top:10px}
+#thanks .sub{color:#bbb}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><symbol id="glogo" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></symbol></svg>
+<div class="app" id="app">
+<div class="top"><div class="tr"><button class="bk" type="button" onclick="back()" aria-label="Back">←</button><img src="../geonova/logo-wordmark.png" alt="Geonova Group"><span class="cnt" id="cnt"></span></div><div class="pb"><i id="pb"></i></div></div>
+
+<section class="scr on" id="start">
+<img class="logo" src="../geonova/logo-wordmark.png" alt="Geonova Group" width="230" height="17">
+<div class="split"><i></i><i></i></div>
+<div class="rate"><span class="st">★★★★★</span><b>5.0</b> on Google</div>
+<h1>Quote in 2 days <em>or we pay you $500.<a href="../promise-terms/">*</a></em></h1>
+<p class="sub">Limestone and gabion walls for Perth and Bunbury homeowners. 6 quick questions.</p>
+<button class="btn" type="button" onclick="go('what')">START MY QUOTE →</button>
+<div class="meta">*<a href="../promise-terms/">Conditions apply</a> · or call <a href="tel:+61458740333">0458 740 333</a></div>
+<div class="revs"><div class="rc"><div class="who"><img src="../quiz-plan/img/craig-dixon.jpg" alt="Craig Dixon"><div class="nm"><b>Craig Dixon · Western Australia</b><span class="gl">Google review</span></div><svg class="gg" viewBox="0 0 48 48" aria-label="Google"><use href="#glogo"/></svg></div><div class="rs"><span class="stars">★★★★★</span></div><q>“I can highly recommend the company if you're looking to build a wall that will last forever and looks bloody awesome 👌”</q></div><div class="rc"><div class="who"><div class="av" style="background:#0B8043">S</div><div class="nm"><b>Sarah Wilson</b><span class="gl">Google review</span></div><svg class="gg" viewBox="0 0 48 48" aria-label="Google"><use href="#glogo"/></svg></div><div class="rs"><span class="stars">★★★★★</span></div><q>“From the first point of contact, communication was quick and straightforward and his knowledge of the product was outstanding. Installation was seamless and they were very pet aware, Very pleased with end result. Highly recommend Josh and Monty for retaining and feature walls”</q></div></div>
+</section>
+
+<section class="scr" id="what" data-s="1"><h1>What are you after?</h1><p class="sub">Pick the closest match.</p><div class="opts">
+<button class="opt" type="button" data-k="what" data-next="type"><span class="th" style="background-image:url(../quiz-plan/img/gabion-retaining.jpg)"></span><span class="tx"><b>Retaining wall</b><small>Holds back soil or a slope</small></span><span class="ck"></span></button>
+<button class="opt" type="button" data-k="what" data-next="type"><span class="th" style="background-image:url(../quiz-plan/img/limestone-pier.jpg)"></span><span class="tx"><b>Freestanding wall</b><small>Fence, front wall or piers</small></span><span class="ck"></span></button>
+<button class="opt" type="button" data-k="what" data-next="sub"><span class="th"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .8-1 1.5v.7M12 17h.01"/></svg></span><span class="tx"><b>Something else</b><small>Tell us about it later</small></span><span class="ck"></span></button>
+</div></section>
+
+<section class="scr" id="type" data-s="2"><h1>Which wall type?</h1><p class="sub">Not sure? We’ll help you choose.</p><div class="opts">
+<button class="opt" type="button" data-k="type" data-v="gabion" data-next="itype"><span class="th" style="background-image:url(../quiz-plan/img/gabion-retaining.jpg)"></span><span class="tx"><b>Gabion</b><small>Rock-filled Galfan mesh</small></span><span class="ck"></span></button>
+<button class="opt" type="button" data-k="type" data-v="limestone" data-next="itype"><span class="th" style="background-image:url(../v2/limestone-wall.jpg)"></span><span class="tx"><b>Limestone blocks</b><small>Engineered limestone</small></span><span class="ck"></span></button>
+<button class="opt" type="button" data-k="type" data-v="both" data-next="itype"><span class="th" style="background-image:url(../quiz-plan/img/craig-wall.jpg)"></span><span class="tx"><b>Quote me for both</b><small>Compare side by side</small></span><span class="ck"></span></button>
+<button class="opt" type="button" data-k="type" data-v="unsure" data-next="itype"><span class="th"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .8-1 1.5v.7M12 17h.01"/></svg></span><span class="tx"><b>Not sure yet</b><small>We’ll recommend one</small></span><span class="ck"></span></button>
+</div></section>
+
+<section class="scr ins" id="itype" data-s="2"><div class="badge">✓</div><h1 id="it-h">Great choice.</h1><p id="it-p"></p><div class="foot"><button class="btn" type="button" onclick="go('height')">CONTINUE →</button></div></section>
+
+<section class="scr" id="height" data-s="3"><h1>How high is the wall?</h1><p class="sub">Rough is fine – we confirm on site.</p>
+<label class="dd" id="dd-h"><select id="h" aria-label="Wall height" onchange="pickDD(this)"><option value="">Select height</option><option>0.4 m (400 mm)</option><option>0.5 m (500 mm)</option><option>0.6 m (600 mm)</option><option>0.7 m (700 mm)</option><option>0.8 m (800 mm)</option><option>0.9 m (900 mm)</option><option>1.0 m (1000 mm)</option><option>1.1 m (1100 mm)</option><option>1.2 m (1200 mm)</option><option>1.3 m (1300 mm)</option><option>1.4 m (1400 mm)</option><option>1.5 m (1500 mm)</option><option>1.6 m (1600 mm)</option><option>1.7 m (1700 mm)</option><option>1.8 m (1800 mm)</option><option>1.9 m (1900 mm)</option><option>2.0 m (2000 mm)</option><option>2.1 m (2100 mm)</option><option>2.2 m (2200 mm)</option><option>2.3 m (2300 mm)</option><option>2.4 m (2400 mm)</option><option>2.5 m (2500 mm)</option><option>2.6 m (2600 mm)</option><option>2.7 m (2700 mm)</option><option>2.8 m (2800 mm)</option><option>2.9 m (2900 mm)</option><option>3.0 m (3000 mm)</option><option>Not sure / custom size</option></select><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span><span class="ok">✓</span></label><div class="hint">Guide: knee height is about 0.5 m, waist about 1 m, head height about 1.7 m.</div><div class="foot"><button class="btn" id="b-h" type="button" disabled onclick="go('length')">CONTINUE →</button></div>
+</section>
+
+<section class="scr" id="length" data-s="4"><h1>How long is the wall?</h1><p class="sub">Pace it out or guess – rough is fine.</p>
+<label class="dd" id="dd-l"><select id="l" aria-label="Wall length" onchange="pickDD(this)"><option value="">Select length</option><option>1 m</option><option>2 m</option><option>3 m</option><option>4 m</option><option>5 m</option><option>6 m</option><option>7 m</option><option>8 m</option><option>9 m</option><option>10 m</option><option>11 m</option><option>12 m</option><option>13 m</option><option>14 m</option><option>15 m</option><option>16 m</option><option>17 m</option><option>18 m</option><option>19 m</option><option>20 m</option><option>21 m</option><option>22 m</option><option>23 m</option><option>24 m</option><option>25 m</option><option>26 m</option><option>27 m</option><option>28 m</option><option>29 m</option><option>30 m</option><option>31 m</option><option>32 m</option><option>33 m</option><option>34 m</option><option>35 m</option><option>36 m</option><option>37 m</option><option>38 m</option><option>39 m</option><option>40 m</option><option>41 m</option><option>42 m</option><option>43 m</option><option>44 m</option><option>45 m</option><option>46 m</option><option>47 m</option><option>48 m</option><option>49 m</option><option>50 m</option><option>50 m+</option><option>Not sure / custom size</option></select><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span><span class="ok">✓</span></label><div class="hint">One big step is roughly 1 m.</div><div class="anchor">Most walls land between <span class="ph">[PLACEHOLDER: $ low]</span> and <span class="ph">[PLACEHOLDER: $ high]</span> per metre, installed.</div><div class="foot"><button class="btn" id="b-l" type="button" disabled onclick="go('isize')">CONTINUE →</button></div>
+</section>
+
+<section class="scr ins" id="isize" data-s="4"><div class="badge">👍</div><h1>Got it. <em>Nearly there.</em></h1><p>Two quick steps and your quote is on its way: in 2 days or we pay you $500.<a href="../promise-terms/">*</a></p><div class="foot"><button class="btn" type="button" onclick="go('sub')">CONTINUE →</button></div></section>
+
+<section class="scr" id="sub" data-s="5"><h1>Where’s the wall?</h1><p class="sub">Suburb or postcode.</p>
+<input class="big" id="suburb" autocomplete="postal-code" placeholder="e.g. Joondalup or 6027" oninput="sbtn.disabled=!this.value.trim()" onkeydown="if(event.key==='Enter'&&this.value.trim())go('contact')">
+<div class="hint">We build across the Perth and Bunbury regions.</div>
+<div class="foot"><button class="btn" id="sbtn" type="button" disabled onclick="go('contact')">CONTINUE →</button></div></section>
+
+<section class="scr" id="contact" data-s="6"><h1>Where do we send <em>your quote?</em></h1><p class="sub">Last step.</p>
+<form id="f">
+<label class="fld">Full name<input required id="nm" autocomplete="name" placeholder="Jane Smith"></label>
+<label class="fld">Phone<span class="hint" style="display:block">So we can confirm details. No spam.</span><input required type="tel" autocomplete="tel" placeholder="04XX XXX XXX"></label>
+<label class="fld">Email<input required type="email" autocomplete="email" placeholder="you@example.com"></label>
+<label class="fld">Anything we should know? <em>(optional)</em><textarea rows="2" placeholder="Slope, access, existing wall…"></textarea></label>
+<div class="pu" id="pu"><label class="pu-add" id="pu-add"><input type="file" accept="image/*" id="pic"><span class="pu-cam"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></span><span class="pu-tx"><b>Add a site photo <em>(optional)</em></b><small>Helps us quote faster.</small></span></label><div class="pu-has" id="pu-has"><img id="pv" alt="Your site photo"><span class="pu-tx"><b>Photo added ✓</b><small id="pu-name"></small></span><button type="button" class="pu-rm" id="pu-rm" aria-label="Remove photo">Remove</button></div></div>
+<div class="foot"><button class="btn" type="submit">GET MY QUOTE IN 2 DAYS →</button><div class="promise">In 2 days or we pay you $500.* <a href="../promise-terms/">Conditions apply</a></div></div>
+</form></section>
+
+<section class="scr" id="thanks"><div class="done">✓</div><h1>Thanks<span id="tn"></span> – you’re in!</h1><p class="sub">Your quote in 2 days or we pay you $500.<a href="../promise-terms/" style="color:var(--y);text-decoration:none">*</a> <a href="../promise-terms/" style="color:var(--y);font-size:13px">Conditions apply</a></p>
+<ol class="next"><li><span>We look over your wall details (and photo, if you added one).</span></li><li><span>We may call or text you from <a href="tel:+61458740333" style="color:var(--y);font-weight:600">0458 740 333</a> to confirm a few details.</span></li><li><span>Your written quote arrives by email or SMS within 2 business days.</span></li></ol>
+<div class="card"><h3>📷 Got photos of the site?</h3><p>Different angles, slopes and access points help us quote faster. Text them to <a href="tel:+61458740333" style="color:var(--y);font-weight:600">0458 740 333</a> or reply to our email.</p></div>
+<div class="card josh"><div class="pp">[PLACEHOLDER: Josh photo]</div><div><h3>G’day, I’m Josh</h3><p>Thanks for reaching out. I’ll look over your wall details and we’ll have your quote to you within 2 business days.</p></div></div>
+<a class="callbtn" href="tel:+61458740333">📞 Call Josh: 0458 740 333</a>
+<a class="lnk" href="#">While you wait: see our recent walls → <span class="ph">[PLACEHOLDER: project gallery link]</span></a>
+</section>
+</div>
+<script>
+const N=6,app=document.getElementById('app');let hist=[],cur='start';const ans={};
+const TYPE=({gabion:'gabion',limestone:'limestone'})[new URLSearchParams(location.search).get('type')]||'';if(TYPE)ans.type=TYPE;
+const COPY={gabion:['Great choice.','Gabion walls built to last up to 80 years. Galfan-coated mesh, rated over 80 years in mild conditions by the BBA.'],
+limestone:['Great choice.','Engineered limestone block walls, built by Josh’s crew and backed by our 7-year workmanship warranty.'],
+both:['Smart move.','We’ll quote you both, so you can compare gabion and limestone side by side.'],
+unsure:['No worries.','We’ll look at your site and recommend the right wall for it.']};
+function show(id,dir){document.querySelectorAll('.scr').forEach(s=>{s.classList.remove('on','fwd','rev')});const el=document.getElementById(id);el.classList.add('on',dir||'fwd');cur=id;
+const s=+el.dataset.s||0;app.classList.toggle('inq',id!=='start'&&id!=='thanks');
+document.getElementById('pb').style.width=(id==='thanks'?100:s/N*100)+'%';document.getElementById('cnt').textContent=s?s+' of '+N:'';
+if(id==='itype'){const c=COPY[ans.type]||COPY.unsure;document.getElementById('it-h').textContent=c[0];document.getElementById('it-p').textContent=c[1];}
+window.scrollTo(0,0);if(id==='sub')setTimeout(()=>document.getElementById('suburb').focus({preventScroll:true}),350);}
+function go(id){if(cur===id)return;if(id==='type'&&TYPE)id='itype';hist.push(cur);show(id,'fwd');}
+function back(){const p=hist.pop();if(p)show(p,'rev');}
+document.addEventListener('click',e=>{const b=e.target.closest('.opt');if(!b||b.dataset.busy)return;
+b.parentElement.querySelectorAll('.opt').forEach(o=>o.classList.remove('sel'));b.classList.add('sel');ans[b.dataset.k]=b.dataset.v||b.querySelector('b').textContent;
+b.dataset.busy=1;setTimeout(()=>{delete b.dataset.busy;go(b.dataset.next)},350);});
+function pickDD(el){const ok=!!el.value;el.classList.toggle('empty',!ok);el.closest('.dd').classList.toggle('has',ok);document.getElementById('b-'+el.id).disabled=!ok;ans[el.id==='h'?'height':'length']=el.value;}
+document.querySelectorAll('.dd select').forEach(el=>el.classList.add('empty'));
+const pic=document.getElementById('pic'),pu=document.getElementById('pu');pic.addEventListener('change',()=>{const f=pic.files[0];if(!f)return;document.getElementById('pv').src=URL.createObjectURL(f);document.getElementById('pu-name').textContent=f.name;pu.classList.add('has');ans.photo=f.name;});
+document.getElementById('pu-rm').addEventListener('click',()=>{pic.value='';pu.classList.remove('has');document.getElementById('pv').removeAttribute('src');delete ans.photo;});
+document.getElementById('f').addEventListener('submit',e=>{e.preventDefault();const n=(document.getElementById('nm').value||'').trim().split(' ')[0];document.getElementById('tn').textContent=n?', '+n:'';hist=[];show('thanks');});
+// preview hooks: ?step=<screen id>&sel=<option index> (for screenshots only)
+const q=new URLSearchParams(location.search),st=q.get('step');if(st&&document.getElementById(st)){if(st==='itype'&&!ans.type)ans.type='gabion';hist=['start'];show(st);const si=q.get('sel');if(si!==null){const sc=document.getElementById(st),dd=sc.querySelector('.dd select');if(dd){dd.selectedIndex=+si;pickDD(dd);}else{const o=sc.querySelectorAll('.opt')[+si];if(o)o.classList.add('sel');}}}
+</script></body></html>
