@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gabion Fabrication — Your DIY kit, next steps</title>
+<meta name="description" content="A calm next step after your kit estimate: natural stone finish, flat-pack cages, and clear guidance for a well-planned DIY gabion wall.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivory:#F7F3EC;
+  --cream:#EFE8DC;
+  --sand:#D9CDB8;
+  --stone:#B8A992;
+  --charcoal:#2A2622;
+  --ink:#3D3832;
+  --muted:#6F675C;
+  --line:rgba(42,38,34,.12);
+  --soft:rgba(42,38,34,.06);
+  --white:#FFFcf7;
+  --accent:#8C7355;
+  --max:1120px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+body{
+  font-family:"Outfit",system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--ivory);
+  line-height:1.65;
+  font-weight:400;
+  font-size:17px;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{width:min(100% - 2.5rem, var(--max));margin-inline:auto}
+.eyebrow{
+  font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--accent);font-weight:500;margin-bottom:.9rem;
+}
+.display{
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-weight:500;letter-spacing:-.01em;line-height:1.12;
+  color:var(--charcoal);
+}
+.lead{font-size:1.08rem;color:var(--muted);max-width:38rem}
+.muted{color:var(--muted)}
+.rule{height:1px;background:var(--line);border:0;margin:0}
+
+/* top bar */
+.top{
+  position:sticky;top:0;z-index:40;
+  backdrop-filter:saturate(140%) blur(10px);
+  background:rgba(247,243,236,.88);
+  border-bottom:1px solid var(--line);
+}
+.top-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.85rem 0;gap:1rem;
+}
+.brand{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+.brand img{height:22px;width:auto;opacity:.92}
+.brand-text{
+  font-family:"Cormorant Garamond",serif;font-size:1.15rem;
+  letter-spacing:.04em;color:var(--charcoal);
+}
+.cue{
+  font-size:.78rem;color:var(--muted);letter-spacing:.04em;
+  max-width:22rem;text-align:right;
+}
+
+/* hero */
+.hero{padding:3.5rem 0 2.5rem}
+.hero-grid{
+  display:grid;grid-template-columns:1.05fr .95fr;gap:2.5rem;
+  align-items:end;
+}
+.hero h1{font-size:clamp(2.4rem,5vw,3.85rem);margin-bottom:1.25rem}
+.hero .lead{margin-bottom:1.35rem}
+.hero-points{
+  display:flex;flex-wrap:wrap;gap:.6rem 1.1rem;margin:1.1rem 0 1.75rem;
+}
+.hero-points span{
+  font-size:.86rem;color:var(--charcoal);
+  padding:.35rem 0;border-bottom:1px solid var(--sand);
+}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center}
+.hero-photo{
+  position:relative;border-radius:2px;overflow:hidden;
+  aspect-ratio:4/5;background:var(--cream);
+  box-shadow:0 30px 60px -40px rgba(42,38,34,.45);
+}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.hero-caption{
+  position:absolute;left:1rem;right:1rem;bottom:1rem;
+  background:rgba(255,252,247,.9);backdrop-filter:blur(8px);
+  padding:.7rem .9rem;font-size:.78rem;color:var(--muted);
+  border:1px solid rgba(255,255,255,.5);
+}
+.note-pill{
+  display:inline-flex;align-items:center;gap:.5rem;
+  margin-top:1.4rem;padding:.55rem .85rem;
+  background:var(--cream);border:1px solid var(--line);
+  font-size:.8rem;color:var(--muted);border-radius:999px;
+}
+
+/* buttons */
+.btn{
+  appearance:none;border:0;cursor:pointer;text-decoration:none;
+  display:inline-flex;align-items:center;justify-content:center;gap:.45rem;
+  font:inherit;font-size:.92rem;font-weight:500;letter-spacing:.04em;
+  padding:.95rem 1.35rem;border-radius:2px;transition:transform .25s var(--ease), background .25s, color .25s, border-color .25s;
+}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--charcoal);color:var(--ivory)}
+.btn-primary:hover{background:#1c1916}
+.btn-secondary{
+  background:transparent;color:var(--charcoal);
+  border:1px solid var(--charcoal);
+}
+.btn-secondary:hover{background:var(--charcoal);color:var(--ivory)}
+
+/* sections */
+section{padding:4.5rem 0}
+.sec-head{max-width:40rem;margin-bottom:2.4rem}
+.sec-head h2{font-size:clamp(2rem,3.6vw,2.85rem);margin-bottom:.9rem}
+.split{
+  display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center;
+}
+.split.rev > :first-child{order:2}
+.panel{
+  background:var(--white);border:1px solid var(--line);
+  padding:1.6rem 1.5rem;border-radius:2px;
+}
+.soft-card{
+  background:linear-gradient(180deg,var(--white),var(--cream));
+  border:1px solid var(--line);padding:1.5rem;border-radius:2px;
+}
+.photo-frame{
+  overflow:hidden;border-radius:2px;background:var(--cream);
+  aspect-ratio:5/4;
+}
+.photo-frame.tall{aspect-ratio:4/5}
+.photo-frame.wide{aspect-ratio:16/9}
+.photo-frame img{width:100%;height:100%;object-fit:cover}
+.list-check{list-style:none;display:grid;gap:.85rem;margin-top:1.2rem}
+.list-check li{
+  display:grid;grid-template-columns:auto 1fr;gap:.75rem;align-items:start;
+  color:var(--ink);
+}
+.list-check i{
+  width:1.35rem;height:1.35rem;border-radius:50%;
+  border:1px solid var(--stone);display:grid;place-items:center;
+  font-size:.65rem;color:var(--accent);margin-top:.15rem;font-style:normal;
+}
+
+/* steps */
+.steps{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;
+}
+.step{
+  background:var(--white);border:1px solid var(--line);
+  padding:1.15rem;min-height:100%;
+  transition:box-shadow .35s var(--ease);
+}
+.step:hover{box-shadow:0 18px 40px -28px rgba(42,38,34,.45)}
+.step-num{
+  font-family:"Cormorant Garamond",serif;font-size:1.5rem;
+  color:var(--accent);margin-bottom:.55rem;
+}
+.step h3{
+  font-family:"Cormorant Garamond",serif;font-size:1.35rem;
+  font-weight:500;margin-bottom:.45rem;line-height:1.2;
+}
+.step p{font-size:.92rem;color:var(--muted)}
+.step .thumb{
+  aspect-ratio:16/10;overflow:hidden;margin:-1.15rem -1.15rem 1rem;
+  background:var(--cream);
+}
+.step .thumb img{width:100%;height:100%;object-fit:cover}
+
+/* stand back */
+.band{
+  background:
+    linear-gradient(180deg, rgba(247,243,236,.2), rgba(247,243,236,.92)),
+    url(assets/landscape-finished.jpg) center/cover no-repeat;
+  min-height:420px;display:grid;align-items:end;
+}
+.band-inner{
+  background:linear-gradient(180deg, transparent, rgba(42,38,34,.72));
+  padding:6rem 0 3rem;color:#F7F3EC;
+}
+.band h2{color:#F7F3EC}
+.band .lead{color:rgba(247,243,236,.86)}
+
+/* case study */
+.case{
+  display:grid;grid-template-columns:1.1fr .9fr;gap:1.25rem;
+}
+.case-slot{
+  border:1px dashed var(--stone);background:rgba(255,252,247,.7);
+  min-height:280px;display:grid;place-items:center;text-align:center;
+  padding:2rem;color:var(--muted);
+}
+.case-slot strong{
+  display:block;font-family:"Cormorant Garamond",serif;
+  font-size:1.5rem;color:var(--charcoal);font-weight:500;margin-bottom:.4rem;
+}
+.review-slot,.review{
+  border:1px solid var(--line);background:var(--white);padding:1.4rem;
+}
+.review q{
+  quotes:none;display:block;
+  font-family:"Cormorant Garamond",serif;font-size:1.35rem;
+  line-height:1.35;color:var(--charcoal);margin:.7rem 0 1rem;
+}
+.who{display:flex;align-items:center;gap:.75rem}
+.who img{width:42px;height:42px;border-radius:50%;object-fit:cover}
+.who b{display:block;font-size:.92rem}
+.who span{font-size:.78rem;color:var(--muted)}
+
+/* cta */
+.cta-box{
+  display:grid;grid-template-columns:1.2fr .8fr;gap:1.5rem;
+  background:var(--charcoal);color:var(--ivory);padding:2.2rem;
+}
+.cta-box h2{color:var(--ivory);font-size:clamp(1.9rem,3vw,2.5rem);margin-bottom:.7rem}
+.cta-box p{color:rgba(247,243,236,.78);max-width:34rem}
+.cta-actions{display:flex;flex-direction:column;gap:.75rem;justify-content:center}
+.cta-box .btn-primary{background:var(--ivory);color:var(--charcoal)}
+.cta-box .btn-primary:hover{background:#fff}
+.cta-box .btn-secondary{border-color:rgba(247,243,236,.45);color:var(--ivory)}
+.cta-box .btn-secondary:hover{background:rgba(247,243,236,.1);border-color:var(--ivory)}
+.fine{font-size:.78rem;color:rgba(247,243,236,.55);margin-top:.6rem}
+
+/* faq */
+.faq{display:grid;gap:0;border-top:1px solid var(--line)}
+.faq details{
+  border-bottom:1px solid var(--line);padding:1.1rem 0;
+}
+.faq summary{
+  cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:1rem;
+  font-weight:500;color:var(--charcoal);
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--accent);font-weight:400}
+.faq details[open] summary::after{content:"–"}
+.faq p{margin-top:.7rem;color:var(--muted);max-width:46rem;font-size:.95rem}
+
+footer{
+  padding:2.5rem 0 3rem;border-top:1px solid var(--line);
+  display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;
+  font-size:.84rem;color:var(--muted);
+}
+
+/* dialog */
+.dialog-backdrop{
+  position:fixed;inset:0;background:rgba(42,38,34,.45);
+  display:none;align-items:center;justify-content:center;z-index:100;
+  padding:1.25rem;
+}
+.dialog-backdrop.open{display:flex}
+.dialog{
+  width:min(100%,420px);background:var(--ivory);border:1px solid var(--line);
+  padding:1.6rem 1.5rem;box-shadow:0 30px 80px -40px rgba(0,0,0,.5);
+}
+.dialog h3{
+  font-family:"Cormorant Garamond",serif;font-size:1.55rem;margin-bottom:.5rem;
+}
+.dialog p{color:var(--muted);margin-bottom:1.2rem;font-size:.95rem}
+.dialog .btn{width:100%}
+
+@media (max-width:900px){
+  .hero-grid,.split,.case,.cta-box,.steps{grid-template-columns:1fr}
+  .split.rev > :first-child{order:0}
+  .cue{display:none}
+  .hero{padding-top:2.2rem}
+  section{padding:3.4rem 0}
+  .steps{grid-template-columns:1fr 1fr}
+}
+@media (max-width:560px){
+  .wrap{width:min(100% - 1.5rem, var(--max))}
+  .steps{grid-template-columns:1fr}
+  .hero-actions,.cta-actions .btn{width:100%}
+  .brand img{height:18px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="brand" href="#top" aria-label="Gabion Fabrication">
+      <img src="assets/logo-wordmark.png" alt="Gabion Fabrication" width="220" height="14">
+    </a>
+    <p class="cue">Your kit estimate is above. Here’s what comes next.</p>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 1. Hero -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">After your estimate</p>
+        <h1 class="display">The wall you’ve admired.<br>The DIY option you might not have considered.</h1>
+        <p class="lead">Love the look of natural stone, but assumed a wall like that was beyond your budget — or beyond your skills?</p>
+        <p class="lead" style="margin-top:.85rem">Our DIY gabion kits give you another way to transform your outdoor space. A straightforward cage-and-stone system, without the traditional block-laying process.</p>
+        <div class="hero-points">
+          <span>A premium-looking finish</span>
+          <span>A project you can make your own</span>
+        </div>
+        <div class="hero-actions">
+          <button class="btn btn-primary" type="button" data-preview="confirm">Confirm my kit</button>
+          <button class="btn btn-secondary" type="button" data-preview="book">Book a call</button>
+        </div>
+        <div class="note-pill">Preview page · confirmation and booking are not connected yet</div>
+      </div>
+      <figure class="hero-photo">
+        <img src="assets/hero-wall.jpg" alt="Finished natural stone gabion retaining wall in a landscaped garden" width="1024" height="1365">
+        <figcaption class="hero-caption">Natural stone. A finished landscape. The product many homeowners only discover when they start pricing a wall.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <hr class="rule wrap">
+
+  <!-- 2. Without the usual compromises -->
+  <section>
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">The discovery</p>
+        <h2 class="display">A stone wall without the usual compromises.</h2>
+        <p class="lead">You get the natural stone look you’ve wanted — without traditional block laying, and with a DIY path that keeps more of the project in your hands.</p>
+        <ul class="list-check">
+          <li><i>✓</i><span>Natural stone finish chosen to suit your home, not a painted block face.</span></li>
+          <li><i>✓</i><span>Flat-pack cages with Galfan-coated mesh — a practical, well-proven cage system for DIY builds.</span></li>
+          <li><i>✓</i><span>A project you can stage: order the kit, select rock, prepare the site, then assemble when you’re ready.</span></li>
+          <li><i>✓</i><span>Savings depend on your site, rock choice, equipment and how much you do yourself — your estimate above is the starting point.</span></li>
+        </ul>
+      </div>
+      <div class="photo-frame tall">
+        <img src="assets/terraced.jpg" alt="Terraced gabion wall with landscaping" width="1200" height="811">
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Result not the hassle -->
+  <section style="background:var(--cream)">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">The journey</p>
+        <h2 class="display">The result, not the hassle.</h2>
+        <p class="lead">You already have the size and the price. What changes next is the path from flat-pack kit to finished landscape — planned carefully for your site.</p>
+      </div>
+      <div class="steps">
+        <article class="step">
+          <div class="thumb"><img src="assets/cages-assemble.jpg" alt="Gabion cages prepared on site" width="1000" height="562"></div>
+          <div class="step-num">01</div>
+          <h3>Kit &amp; plan</h3>
+          <p>Confirm your kit against wall size, access and the finish you want. Check what your quote includes before you order.</p>
+        </article>
+        <article class="step">
+          <div class="thumb"><img src="assets/limestone.jpg" alt="Site context for foundations and existing walls" width="600" height="325"></div>
+          <div class="step-num">02</div>
+          <h3>Site &amp; base</h3>
+          <p>Prepare foundations, drainage and any engineering or council requirements that apply to your property.</p>
+        </article>
+        <article class="step">
+          <div class="thumb"><img src="assets/rocks-placed.jpg" alt="Rock being placed into gabion cages" width="1000" height="1333"></div>
+          <div class="step-num">03</div>
+          <h3>Assemble &amp; fill</h3>
+          <p>Assemble the cages, then place suitable rock for structure and the face finish you want to live with.</p>
+        </article>
+        <article class="step">
+          <div class="thumb"><img src="assets/landscape-finished.jpg" alt="Completed gabion landscape with gate" width="1400" height="629"></div>
+          <div class="step-num">04</div>
+          <h3>Finish the space</h3>
+          <p>Bring in planting, lawn and finishing touches. Stand back at a boundary that feels complete.</p>
+        </article>
+      </div>
+      <p class="muted" style="margin-top:1.4rem;font-size:.9rem">Build duration varies with wall size, site access, rock handling and weather. A well-planned DIY project is the goal — not a race.</p>
+    </div>
+  </section>
+
+  <!-- 4. Stand back -->
+  <section class="band">
+    <div class="band-inner">
+      <div class="wrap" style="max-width:40rem">
+        <p class="eyebrow" style="color:#D9CDB8">The feeling</p>
+        <h2 class="display">Stand back and see what you built.</h2>
+        <p class="lead" style="margin-top:.9rem">The boundary looks clean. The yard feels complete. Neighbours notice the difference. And if your DIY path does free up budget, that room can go toward a pool, planting or finishing the rest of the landscape — when the numbers work for you.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. What others have built -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Proof</p>
+        <h2 class="display">What others have built.</h2>
+        <p class="lead">Real projects belong here — with approved photos and verified comparisons only.</p>
+      </div>
+      <div class="case">
+        <div class="case-slot">
+          <div>
+            <strong>Case study coming soon</strong>
+            <p>Trevor · Mandurah — before/after photos and a verified like-for-like savings comparison will sit here once approved. No invented figures.</p>
+          </div>
+        </div>
+        <div class="review">
+          <p class="eyebrow" style="margin-bottom:.35rem">Google review</p>
+          <q>“I can highly recommend the company if you're looking to build a wall that will last forever and looks bloody awesome 👌”</q>
+          <div class="who">
+            <img src="assets/craig-dixon.jpg" alt="Craig Dixon" width="42" height="42">
+            <div>
+              <b>Craig Dixon</b>
+              <span>Western Australia · Google review</span>
+            </div>
+          </div>
+          <p class="muted" style="margin-top:1rem;font-size:.82rem">Optional DIY-kit review slot reserved below for a verbatim customer quote once approved.</p>
+        </div>
+      </div>
+      <div class="review-slot" style="margin-top:1rem">
+        <p class="eyebrow">Review placeholder</p>
+        <p class="muted" style="margin-top:.4rem">Space for one approved DIY-kit or assembly review — exact wording and permission required before publishing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Next step -->
+  <section style="padding-top:1rem">
+    <div class="wrap">
+      <div class="cta-box">
+        <div>
+          <p class="eyebrow" style="color:#D9CDB8">Next step is simple</p>
+          <h2 class="display">You don’t have to plan the whole build today.</h2>
+          <p>Confirm your kit if you’re ready, or book a call to talk through your wall, engineering and council requirements, and any drawings needed before you commit. Scope and inclusions are confirmed on the call — nothing is assumed included until we say so.</p>
+          <p class="fine">Preview only. Buttons do not place an order or book a real appointment.</p>
+        </div>
+        <div class="cta-actions">
+          <button class="btn btn-primary" type="button" data-preview="confirm">Confirm my kit</button>
+          <button class="btn btn-secondary" type="button" data-preview="book">Book a call</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="padding-top:2rem">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Good to know</p>
+        <h2 class="display">A few calm answers.</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>What’s included in the kit estimate?</summary>
+          <p>Your estimate above covers the kit items quoted for your sizes. Rock, delivery, equipment hire, engineering and council fees are separate unless your quote specifically includes them. We’ll confirm inclusions before you order.</p>
+        </details>
+        <details>
+          <summary>Do I need engineering or council approval?</summary>
+          <p>Often yes — it depends on wall height, site conditions and your local requirements. On a call we can talk through what typically applies and what drawings may be needed. Approvals are not guaranteed by us; your site and council decide.</p>
+        </details>
+        <details>
+          <summary>Can gabion sit in front of an existing limestone wall?</summary>
+          <p>Sometimes — as a screening or feature approach after a proper site assessment. It is not a repair method for an unsafe or failing wall. If the existing wall needs structural attention, that comes first.</p>
+        </details>
+        <details>
+          <summary>How long does a DIY build take?</summary>
+          <p>It varies with length, height, access, rock handling and weather. Some homeowners stage the work over weekends; others need longer. We’ll help you plan a realistic sequence rather than promise a fixed timeframe.</p>
+        </details>
+        <details>
+          <summary>What about the mesh?</summary>
+          <p>Our DIY kits use Galfan-coated mesh cages, supplied flat-packed for assembly. Coatings and product certifications relate to the mesh system — not an unconditional lifespan for every finished wall on every site.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap" style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;width:100%">
+    <div>
+      <strong style="color:var(--charcoal);font-weight:500">Gabion Fabrication</strong>
+      <p>DIY gabion kits · Western Australia</p>
+    </div>
+    <div style="text-align:right">
+      <p>0458 740 333 · hello@gabionfabrication.com.au</p>
+      <p>Mockup preview · not a live checkout</p>
+    </div>
+  </div>
+</footer>
+
+<div class="dialog-backdrop" id="previewDialog" role="dialog" aria-modal="true" aria-labelledby="dlgTitle" hidden>
+  <div class="dialog">
+    <h3 id="dlgTitle">Preview only</h3>
+    <p id="dlgBody">Confirmation and booking are not connected on this mockup.</p>
+    <button class="btn btn-primary" type="button" id="dlgClose">Close</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  var dlg = document.getElementById('previewDialog');
+  var body = document.getElementById('dlgBody');
+  var title = document.getElementById('dlgTitle');
+  function openDlg(kind){
+    title.textContent = 'Preview only';
+    body.textContent = kind === 'book'
+      ? 'Preview only — confirmation/booking is not connected. A real call booking would be wired here later.'
+      : 'Preview only — confirmation/booking is not connected. A real kit confirmation step would be wired here later.';
+    dlg.hidden = false;
+    dlg.classList.add('open');
+  }
+  function closeDlg(){
+    dlg.classList.remove('open');
+    dlg.hidden = true;
+  }
+  document.querySelectorAll('[data-preview]').forEach(function(btn){
+    btn.addAttempt = null;
+    btn.addEventListener('click', function(){ openDlg(btn.getAttribute('data-preview')); });
+  });
+  document.getElementById('dlgClose').addEventListener('click', closeDlg);
+  dlg.addEventListener('click', function(e){ if(e.target === dlg) closeDlg(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeDlg(); });
+})();
+</script>
+</body>
+</html>
