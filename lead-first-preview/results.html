@@ -212,8 +212,8 @@ input:focus,select:focus{outline:2px solid var(--accent);outline-offset:1px}
     <div class="choices" aria-label="Your next step">
       <div class="c1">
         <h3>Happy with your estimate?</h3>
-        <p>We’ll confirm your details and kit configuration before you place an order.</p>
-        <button class="btn" type="button" data-v="order">Continue to order</button>
+        <p>Next, a few quick questions about your site, so we can check it before you place an order.</p>
+        <a class="btn" id="go-sv" href="site-verification.html">Continue to order</a>
       </div>
       <div class="c2">
         <p>Prefer to talk it through first?</p>
@@ -274,6 +274,7 @@ input:focus,select:focus{outline:2px solid var(--accent);outline-offset:1px}
     $('o-dim').textContent=f2(L)+' m × '+f2(H)+' m, as entered';
     $('r-goal').textContent=g||'Not specified';
   }
+  if(location.search){$('go-sv').href='site-verification.html'+location.search;}
   var m=$('m'),last=null;
   function open(v){last=document.activeElement;['order','call','guide'].forEach(function(k){$('v-'+k).hidden=k!==v});m.classList.add('on');document.body.style.overflow='hidden';$('mx').focus();}
   function close(){m.classList.remove('on');document.body.style.overflow='';if(last)last.focus();}
