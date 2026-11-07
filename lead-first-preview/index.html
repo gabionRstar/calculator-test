@@ -236,12 +236,12 @@ input:focus,select:focus{outline:2px solid var(--accent);outline-offset:1px}
       <label for="goal">What are you hoping to achieve?</label>
       <select id="goal">
         <option value="">Select one</option>
-        <option>Replace an existing retaining wall</option>
-        <option>Create a level space</option>
-        <option>Front boundary or feature wall</option>
-        <option>Privacy or screening</option>
-        <option>Improve the look of my garden</option>
-        <option>Other</option>
+        <option value="rep">Replace an existing retaining wall</option>
+        <option value="lvl">Create a level space</option>
+        <option value="bnd">Front boundary or feature wall</option>
+        <option value="prv">Privacy or screening</option>
+        <option value="gdn">Improve the look of my garden</option>
+        <option value="oth">Other</option>
       </select>
       <label for="pc">Delivery postcode</label>
       <input id="pc" type="text" inputmode="numeric" maxlength="4" autocomplete="off" placeholder="e.g. 6210">
@@ -258,7 +258,7 @@ input:focus,select:focus{outline:2px solid var(--accent);outline-offset:1px}
       <div class="consent"><input type="checkbox" id="mk"><label for="mk">Optional: also send me DIY tips and project ideas. Unsubscribe any time.</label></div>
       <p class="err" id="e2" role="alert"></p>
       <div class="pnav"><button class="back" type="button" id="b2">← Back</button><button class="btn" type="button" id="n2">See my estimate</button></div>
-      <p class="small" style="margin-top:.7rem">Design preview — nothing you type is sent or saved. Reloading the page clears it.</p>
+      <p class="small" style="margin-top:.7rem">Design preview — nothing you type is sent or saved. Only your wall size and purpose carry to the results page; name, email, phone and postcode are not passed on.</p>
     </div>
 
     <div id="s3" hidden>
@@ -309,10 +309,12 @@ input:focus,select:focus{outline:2px solid var(--accent);outline-offset:1px}
     else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test($('em').value.trim()))e='Please enter a valid email.';
     $('e2').textContent=e;if(e)return;
     var L=num('len'),H=num('ht');
+    location.href='results.html?l='+encodeURIComponent(f2(L))+'&h='+encodeURIComponent(f2(H))+'&g='+encodeURIComponent($('goal').value);
+    return;
     $('r-hi').textContent=$('nm').value.trim()?'at a glance, '+$('nm').value.trim():'at a glance';
     $('r-dim').textContent=f2(L)+' m long × '+f2(H)+' m high';
     $('r-area').textContent='≈ '+f2(L*H)+' m²';
-    $('r-goal').textContent=$('goal').value;
+    $('r-goal').textContent=$('goal').options[$('goal').selectedIndex].text;
     $('r-pc').textContent=$('pc').value.trim();
     step(3);
   });
