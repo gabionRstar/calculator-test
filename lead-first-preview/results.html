@@ -120,13 +120,19 @@ input:focus,select:focus{outline:2px solid var(--accent);outline-offset:1px}
 .list{list-style:none;padding:0;margin:.3rem 0 0}
 .list li{padding:.4rem 0 .4rem 1.4rem;position:relative;border-bottom:1px solid var(--line);font-size:.92rem}
 .list li::before{content:"✓";position:absolute;left:0;color:var(--accent)}
-.list.x li::before{content:"–";color:var(--muted)}
+.list.ex li::before{content:"–";color:var(--muted)}
 .calc{margin-top:1.2rem;border-top:1px solid var(--line);padding-top:1rem}
 .calc table{width:100%;border-collapse:collapse;font-size:.9rem}
 .calc th,.calc td{text-align:left;padding:.45rem 0;border-bottom:1px solid var(--line);vertical-align:top}
 .calc td.r{text-align:right;white-space:nowrap;font-weight:500;color:var(--charcoal)}
 .calc small{display:block;color:var(--muted);font-size:.8rem}
 .choices{margin-top:2.4rem}
+.list.ex,.cols ul{position:static}
+body{padding-bottom:4.5rem}
+.choices .btn{text-decoration:none;white-space:normal;text-align:center;line-height:1.3;max-width:100%;box-sizing:border-box}
+.c2 h3{font-size:1.05rem;margin:0 0 .25rem}
+.c2>div{flex:1 1 14rem;min-width:0}
+@media(max-width:560px){.c1,.c2{padding:1.2rem 1rem}.c1 .btn,.c2 .btn{width:100%;max-width:none}}
 .c1{background:var(--charcoal);color:var(--ivory);border-radius:2px;padding:1.6rem 1.5rem}
 .c1 h3{color:var(--ivory);font-size:1.15rem}
 .c1 p{color:rgba(247,243,236,.8);margin:.3rem 0 1.1rem}
@@ -209,7 +215,7 @@ input:focus,select:focus{outline:2px solid var(--accent);outline-offset:1px}
         </div>
         <div>
           <h3>Not included unless quoted</h3>
-          <ul class="list x" style="margin-top:.2rem">
+          <ul class="list ex" style="margin-top:.2rem">
             <li>Site preparation and excavation</li>
             <li>Installation labour</li>
             <li>Engineering</li>
@@ -237,15 +243,15 @@ input:focus,select:focus{outline:2px solid var(--accent);outline-offset:1px}
 
     <div class="choices" aria-label="Your next step">
       <div class="c1">
-        <h3>Happy with your estimate?</h3>
-        <p>Next, a few quick questions about your site, so we can check it before you place an order.</p>
-        <a class="btn" id="go-sv" href="site-verification.html">Continue to order</a>
+        <h3>Ready to get your project underway?</h3>
+        <p>Confirm your site conditions, wall requirements and final kit configuration.</p>
+        <a class="btn" id="go-sv" href="site-verification.html">Continue to site assessment</a>
       </div>
       <div class="c2">
-        <p>Prefer to talk it through first?</p>
-        <button class="btn" type="button" data-v="call">Book a call</button>
+        <div><h3>Want to talk it through first?</h3><p>Speak with us about your project, installation or any questions before proceeding.</p></div>
+        <button class="btn" type="button" data-v="call">Book a project consultation</button>
       </div>
-      <div class="c3"><button type="button" data-v="guide">Send me the installation guide and project information</button></div>
+      <div class="c3"><button type="button" data-v="guide">Not ready yet? Get the installation guide and project information</button></div>
     </div>
   </div>
 </main>
@@ -271,8 +277,8 @@ input:focus,select:focus{outline:2px solid var(--accent);outline-offset:1px}
     </div>
     <div id="v-call" class="msg" hidden>
       <div class="ic">📞</div>
-      <h2>Book a call</h2>
-      <p class="small">In the live version, you’d pick a time here and Josh would call to talk through your wall.</p>
+      <h2>Book a project consultation</h2>
+      <p class="small">In the live version, you’d pick a time here and we’d arrange a project consultation to talk through your wall, installation and any questions.</p>
       <p class="illus" style="margin-bottom:0">Preview only — no booking is made.</p>
     </div>
     <div id="v-guide" class="msg" hidden>
