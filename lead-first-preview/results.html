@@ -121,6 +121,11 @@ input:focus,select:focus{outline:2px solid var(--accent);outline-offset:1px}
 .list li{padding:.4rem 0 .4rem 1.4rem;position:relative;border-bottom:1px solid var(--line);font-size:.92rem}
 .list li::before{content:"✓";position:absolute;left:0;color:var(--accent)}
 .list.x li::before{content:"–";color:var(--muted)}
+.calc{margin-top:1.2rem;border-top:1px solid var(--line);padding-top:1rem}
+.calc table{width:100%;border-collapse:collapse;font-size:.9rem}
+.calc th,.calc td{text-align:left;padding:.45rem 0;border-bottom:1px solid var(--line);vertical-align:top}
+.calc td.r{text-align:right;white-space:nowrap;font-weight:500;color:var(--charcoal)}
+.calc small{display:block;color:var(--muted);font-size:.8rem}
 .choices{margin-top:2.4rem}
 .c1{background:var(--charcoal);color:var(--ivory);border-radius:2px;padding:1.6rem 1.5rem}
 .c1 h3{color:var(--ivory);font-size:1.15rem}
@@ -174,8 +179,17 @@ input:focus,select:focus{outline:2px solid var(--accent);outline-offset:1px}
       <ul class="list">
         <li>Gabion kit</li>
         <li>Estimated rock allowance</li>
+        <li>Geotextile allowance</li>
         <li>Delivery estimate</li>
       </ul>
+      <div class="calc" id="calc" aria-labelledby="calc-h">
+        <h3 id="calc-h">Calculated rock and geotextile allowances</h3>
+        <table>
+          <tr><td>Rock<small id="c-rock-basis">6 m³ × $127.60 per m³ inc GST (sample 12 m × 1 m wall)</small></td><td class="r" id="c-rock">$765.60 inc GST</td></tr>
+          <tr><td>Geotextile, 1.2 m × 50 m roll<small id="c-geo-basis">1 roll × $137.50 per roll inc GST (sample 12 m wall)</small></td><td class="r" id="c-geo">$137.50 inc GST</td></tr>
+        </table>
+        <p class="small" style="margin:.6rem 0 0">Rock quantity uses our calculator allowance for a 0.5 m wide wall: 0.25 m³ per metre of length for each 0.5 m course of height (heights 0.5–3 m). Geotextile is a calculator allowance of one 50 m roll per 50 m of wall length, rounded up. Rock type, quantities and final specification are confirmed with your quote. These allowances are shown separately; the illustrative $4,500 sample total above is not calculated from them and they are not added to it.</p>
+      </div>
       <div class="cols">
         <div>
           <h3>Confirmed before you order</h3>
@@ -266,6 +280,7 @@ input:focus,select:focus{outline:2px solid var(--accent);outline-offset:1px}
   var q=new URLSearchParams(location.search);
   var L=parseFloat(q.get('l')),H=parseFloat(q.get('h')),g=GOALS[q.get('g')];
   function f2(n){return String(Math.round(n*100)/100)}
+  function money(v){return '$'+(Math.round(v*100)/100).toLocaleString('en-AU',{minimumFractionDigits:2,maximumFractionDigits:2})}
   if(isFinite(L)&&isFinite(H)&&L>0&&H>0&&L<=200&&H<=5){
     $('state').textContent='Your details · illustrative price';
     $('intro').textContent='Here’s a summary based on the wall you described. The price below is a design illustration, not calculated from your dimensions.';
@@ -273,6 +288,12 @@ input:focus,select:focus{outline:2px solid var(--accent);outline-offset:1px}
     $('r-area').textContent='≈ '+f2(L*H)+' m²';
     $('o-dim').textContent=f2(L)+' m × '+f2(H)+' m, as entered';
     $('r-goal').textContent=g||'Not specified';
+    var lifts=H/0.5,ok=Math.abs(lifts-Math.round(lifts))<1e-9&&H>=0.5&&H<=3;
+    if(ok){var vol=L*Math.round(lifts)*0.25;
+      $('c-rock-basis').textContent=f2(vol)+' m³ × $127.60 per m³ inc GST';$('c-rock').textContent=money(vol*127.6)+' inc GST';
+    }else{$('c-rock-basis').textContent='Calculated for wall heights in 0.5 m steps up to 3 m';$('c-rock').textContent='Confirmed with your quote';}
+    var rolls=Math.ceil(L/50);
+    $('c-geo-basis').textContent=rolls+(rolls===1?' roll':' rolls')+' × $137.50 per roll inc GST';$('c-geo').textContent=money(rolls*137.5)+' inc GST';
   }
   if(location.search){$('go-sv').href='site-verification.html'+location.search;}
   var m=$('m'),last=null;
