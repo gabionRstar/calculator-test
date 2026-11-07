@@ -147,11 +147,19 @@ input:focus,select:focus{outline:2px solid var(--accent);outline-offset:1px}
 .msg .ic{font-size:2rem;margin-bottom:.4rem}
 .know{margin-top:2.4rem}
 .know h2{font-size:clamp(1.4rem,3.6vw,1.9rem)}
-.know .kg{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem}
-@media(max-width:640px){.know .kg{grid-template-columns:1fr}}
-.know article{background:var(--white);border:1px solid var(--line);border-radius:2px;padding:1.1rem 1.2rem}
-.know h3{font-size:1rem;margin:0 0 .4rem;color:var(--charcoal)}
-.know p{margin:0;font-size:.9rem;color:var(--muted)}
+.faq{margin-top:1rem;border-top:1px solid var(--line)}
+.fq{border-bottom:1px solid var(--line);background:transparent}
+.fq summary{list-style:none;cursor:pointer;display:flex;align-items:flex-start;gap:.8rem;padding:1rem .2rem;font-weight:500;color:var(--charcoal);font-size:1rem;line-height:1.4}
+.fq summary::-webkit-details-marker{display:none}
+.fq summary::after{content:"+";margin-left:auto;font-size:1.3rem;line-height:1;color:var(--accent);flex:none;transition:transform .2s}
+.fq[open] summary::after{content:"–"}
+.fq summary:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.fq summary .n{font-family:Anton,Impact,sans-serif;color:var(--accent);min-width:1.4rem;flex:none}
+.fq .fa{padding:0 .2rem 1.1rem 2.2rem}
+.fq .fa p{margin:0 0 .6rem;font-size:.93rem;color:var(--ink)}
+.fq .fa p:last-child{margin-bottom:0}
+.fq .fa strong{color:var(--charcoal);font-weight:600}
+@media(max-width:560px){.fq .fa{padding-left:.2rem}}
 </style>
 </head>
 <body>
@@ -213,13 +221,17 @@ input:focus,select:focus{outline:2px solid var(--accent);outline-offset:1px}
     </div>
 
     <section class="know" id="know" aria-labelledby="know-h">
-      <h2 id="know-h">A few things you might want to know before getting started</h2>
-      <p class="small" style="margin:0">We’ve answered some common questions to help you decide whether a DIY gabion wall is right for your project.</p>
-      <div class="kg">
-        <article><h3>Do I need engineering for my gabion wall?</h3><p>Not every gabion project requires individually prepared engineering drawings. Requirements depend on wall height, site conditions, soil, slopes and any additional loads. Gabion Fabrication can arrange engineering on request where required. Our kits are supplied as DIY products and do not automatically include site-specific engineering.</p></article>
-        <article><h3>Do I need council approval?</h3><p>In WA, some retaining walls up to 500 mm high may be exempt from a building permit, provided they meet the relevant exemption conditions. Taller walls and certain site situations may require approval. Building-permit exemptions do not necessarily remove planning approval requirements, so check with your local council before construction.</p></article>
-        <article><h3>Do I need building experience to install a gabion wall?</h3><p>Gabion cages are assembled with connectors such as spirals or clips (depending on your kit), filled with stone and secured with lids. Our installation guidance explains the process step by step. You don’t need traditional bricklaying skills, although suitable preparation, tools and physical work are required. Retaining walls must be constructed to the appropriate design and site requirements.</p></article>
-        <article><h3>Are gabions cheaper than limestone retaining walls?</h3><p>Doing the work yourself offers potential savings on installation labour. However, the overall cost depends on wall dimensions, stone, delivery, equipment and site preparation. Your estimate gives you a starting point for comparing the DIY gabion kit with a comparable limestone wall. Remember to compare equivalent scopes, including materials, delivery and installation.</p></article>
+      <h2 id="know-h">Frequently Asked Questions</h2>
+      <div class="faq">
+        <details class="fq"><summary><span class="n">1</span><span class="qt">Do I need council approval or engineering?</span></summary><div class="fa"><p>In Western Australia, retaining walls 500mm high and under are generally exempt from a building permit, provided they meet the relevant exemption conditions.</p><p>For taller walls or projects involving boundary distances, driveways, buildings, slopes or additional loads, engineering or council approval may be required.</p><p>The good news is, Gabion Fabrication can help coordinate council requirements and arrange engineering where needed for your project.</p><p>Simply complete our project assessment form with your wall dimensions and site details. We’ll assess your specific site conditions and help identify what’s required.</p><p><strong>You don’t need to navigate the process alone. We’ll help you through it.</strong></p></div></details>
+        <details class="fq"><summary><span class="n">2</span><span class="qt">I’ve never built a gabion wall before. Can I install it myself?</span></summary><div class="fa"><p>Absolutely! Our DIY kits are designed to make gabion construction accessible to homeowners.</p><p>The process involves assembling the cages, connecting the panels, filling them with stone and securing the lids.</p><p>We provide a step-by-step installation guide to walk you through the process, including the tools you’ll need.</p><p>You don’t need professional building experience, just some basic DIY confidence and a willingness to get hands-on.</p></div></details>
+        <details class="fq"><summary><span class="n">3</span><span class="qt">Are gabion retaining walls strong and durable?</span></summary><div class="fa"><p>Gabions are an established construction method used in major infrastructure projects throughout Europe and around the world.</p><p>They’re used for substantial retaining structures, motorway embankments, railway infrastructure, riverbank protection and residential landscaping.</p><p>Their combination of steel mesh and natural stone creates a robust retaining system when correctly designed and installed for the site conditions.</p></div></details>
+        <details class="fq"><summary><span class="n">4</span><span class="qt">Will I actually save money compared to a traditional retaining wall?</span></summary><div class="fa"><p>In many cases, yes! One of the biggest advantages of a DIY gabion wall is saving on expensive installation labour.</p><p>Instead of paying a contractor to build your entire retaining wall, you can assemble and fill the cages yourself.</p><p>You also get to choose your own stone finish to suit your home and budget.</p><p><strong>Why pay someone else to build it when you can do it yourself and potentially save thousands?</strong></p></div></details>
+        <details class="fq"><summary><span class="n">5</span><span class="qt">How difficult are the cages to assemble?</span></summary><div class="fa"><p>Our kits are supplied as flat-pack panels, ready for assembly.</p><p>The panels are connected using the specified joining system, such as spirals or C-rings, before being filled with stone and secured with lids.</p><p>Our installation guide takes you through each stage, making the assembly process straightforward to follow.</p></div></details>
+        <details class="fq"><summary><span class="n">6</span><span class="qt">What if my property has clay soil or a sloping block?</span></summary><div class="fa"><p>Gabion walls can be used across a range of ground conditions and landscaping applications.</p><p>Soil type, slope, wall height, drainage and nearby structures all influence the design.</p><p>That’s why we ask you to complete our project assessment form. We’ll review your site details and help determine the appropriate kit configuration and whether additional drainage or engineering is required.</p></div></details>
+        <details class="fq"><summary><span class="n">7</span><span class="qt">What if I need help during installation?</span></summary><div class="fa"><p>We’re here to help.</p><p>You’ll receive installation instructions covering the assembly and filling process. If you have questions about your kit or installation, you can contact Gabion Fabrication for assistance.</p></div></details>
+        <details class="fq"><summary><span class="n">8</span><span class="qt">What happens after I submit my project details?</span></summary><div class="fa"><p>We’ll review your wall dimensions, proposed location and site conditions.</p><p>We’ll then help confirm your kit configuration, pricing and any additional requirements, including engineering or council processes where applicable.</p><p>Once everything is confirmed, we’ll provide your final quote. There’s no obligation to proceed until you’re happy with the details.</p></div></details>
+        <details class="fq"><summary><span class="n">9</span><span class="qt">How quickly can I receive my kit?</span></summary><div class="fa"><p>Once your order and specifications are confirmed, delivery can generally be arranged within 5 business days, subject to stock availability and delivery location.</p><p>We’ll confirm your expected delivery timeframe when preparing your order.</p></div></details>
       </div>
     </section>
 
