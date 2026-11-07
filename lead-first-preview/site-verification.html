@@ -142,9 +142,6 @@ textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
 .conf .tag{display:inline-block;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(196,163,90,.5);padding:.15rem .5rem;border-radius:2px;margin-bottom:.8rem}
 .conf h2{color:var(--ivory);font-size:clamp(1.3rem,4vw,1.7rem)}
 .conf p{color:rgba(247,243,236,.85);margin:.4rem 0 0}
-.flag{margin-top:.8rem;border-left:3px solid #b5452f;background:#fbece8;color:#6e2a1d;padding:.6rem .8rem;border-radius:2px;font-size:.9rem}
-.flag b{display:block;color:#8e2f1e;letter-spacing:.04em}
-.conf .cflag{margin-top:.8rem;background:rgba(181,69,47,.22);border-left:3px solid #e08a74;padding:.55rem .75rem;color:#fff}
 .copyfb{position:absolute;left:-9999px}
 </style>
 </head>
@@ -168,8 +165,7 @@ textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
           <label class="opt"><input type="radio" name="ground" value="Gravel">Gravel</label>
           <label class="opt"><input type="radio" name="ground" value="Previously filled ground">Previously filled ground</label>
           <label class="opt"><input type="radio" name="ground" value="Not sure">Not sure</label>
-        </div>
-        <div class="flag" id="clayflag" role="status" aria-live="polite" hidden><b>Engineering required</b>For clay sites, we require engineering assessment before finalising your kit.</div></fieldset>
+        </div></fieldset>
 
       <fieldset class="q"><legend><span class="n">2</span>Does the ground slope around the proposed wall?</legend>
         <div class="opts">
@@ -245,7 +241,6 @@ textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
       <span class="tag">Sample confirmation — nothing has been submitted</span>
       <h2 id="ct">Thanks, we’ve received your site details.</h2>
       <p>Our team will review your information and let you know whether your project appears suitable for a standard gabion kit or whether further assessment is recommended.</p>
-      <p class="cflag" id="cclay" hidden><b>Engineering required:</b> For clay sites, we require engineering assessment before finalising your kit.</p>
       <p>This preliminary review is not engineering approval or confirmation of council approval.</p>
     </div>
   </div>
@@ -262,16 +257,19 @@ textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
     if(c===none&&c.checked){near.forEach(function(o){if(o!==none)o.checked=false});}
     else if(c!==none&&c.checked){none.checked=false;}
   })});
-  var CLAY='For clay sites, we require engineering assessment before finalising your kit.';
-  function isClay(){var g=document.querySelector('input[name=ground]:checked');return !!g&&g.value==='Clay'}
-  function upd(){var c=isClay();$('clayflag').hidden=!c;$('cclay').hidden=!c}
-  document.querySelectorAll('input[name=ground]').forEach(function(r){r.addEventListener('change',upd)});
+  /* INTERNAL STAFF SCREENING RULE — implementation handoff for GoHighLevel (not wired here).
+     Business rule: ground = "Clay" => internal review flag engineeringRequired = true
+     ("For clay sites, we require engineering assessment before finalising your kit.").
+     Staff-only: never shown to the customer, never in copied responses or confirmation,
+     and not an engineering outcome. This static preview has no backend, so the flag is
+     not stored or sent anywhere; it must be implemented as a GHL workflow/tag for staff. */
+  var internalReviewFlags=[{field:'ground',whenValue:'Clay',flag:'engineeringRequired',audience:'staff-only'}];
   var Q=[['ground','1. What type of ground will the wall sit on?'],['slope','2. Does the ground slope around the proposed wall?'],['near','3. Are any of these close to the proposed wall?'],['water','4. Does water collect in this area after rain?'],['eng','5. Do you already have engineering drawings for this wall?'],['council','6. Have you checked whether your project requires council approval?']];
   var SAMPLE={ground:'Natural sand',slope:'Slopes upwards behind the wall',near:'Fence, Property boundary',water:'No',eng:'No',council:'Not sure',notes:'Sample note: existing limestone wall to be removed first.'};
   function val(n){var a=[].slice.call(document.querySelectorAll('input[name='+n+']:checked')).map(function(i){return i.value});return a.join(', ')}
   function text(){
     var any=false,lines=['Gabion Fabrication – Site Verification (preview)'];
-    Q.forEach(function(q){var v=val(q[0]);if(v)any=true;lines.push(q[1]+'\n'+(v||'—')+(q[0]==='ground'&&v==='Clay'?'\nFlag: Engineering required. '+CLAY:''))});
+    Q.forEach(function(q){var v=val(q[0]);if(v)any=true;lines.push(q[1]+'\n'+(v||'—'))});
     var n=$('notes').value.trim();if(n)any=true;
     lines.push('7. Photos\nNot available in preview (GoHighLevel upload)');
     lines.push('8. Anything else we should know?\n'+(n||'—'));
@@ -285,7 +283,7 @@ textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
     if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(r.t).then(function(){done(true)},function(){done(fallback(r.t))})}
     else done(fallback(r.t));
   });
-  $('pc').addEventListener('click',function(){upd();var c=$('conf');c.hidden=false;c.focus();c.scrollIntoView({behavior:'smooth',block:'start'});$('fb').textContent='Showing sample confirmation. Nothing was submitted.'});
+  $('pc').addEventListener('click',function(){var c=$('conf');c.hidden=false;c.focus();c.scrollIntoView({behavior:'smooth',block:'start'});$('fb').textContent='Showing sample confirmation. Nothing was submitted.'});
 })();
 </script>
 </body>
