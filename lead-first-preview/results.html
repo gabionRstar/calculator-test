@@ -140,6 +140,13 @@ input:focus,select:focus{outline:2px solid var(--accent);outline-offset:1px}
 .review ol{list-style:none;padding:0;margin:0}
 .msg{text-align:center}
 .msg .ic{font-size:2rem;margin-bottom:.4rem}
+.know{margin-top:2.4rem}
+.know h2{font-size:clamp(1.4rem,3.6vw,1.9rem)}
+.know .kg{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem}
+@media(max-width:640px){.know .kg{grid-template-columns:1fr}}
+.know article{background:var(--white);border:1px solid var(--line);border-radius:2px;padding:1.1rem 1.2rem}
+.know h3{font-size:1rem;margin:0 0 .4rem;color:var(--charcoal)}
+.know p{margin:0;font-size:.9rem;color:var(--muted)}
 </style>
 </head>
 <body>
@@ -190,6 +197,16 @@ input:focus,select:focus{outline:2px solid var(--accent);outline-offset:1px}
       </div>
       <p class="small" style="margin-top:1rem">This is an estimate, not a quote. Final quantities, location and access are confirmed before any order.</p>
     </div>
+
+    <section class="know" id="know" aria-labelledby="know-h">
+      <h2 id="know-h">A few things worth knowing before you decide</h2>
+      <div class="kg">
+        <article><h3>What’s included, and what other costs should I allow for?</h3><p>Your estimate covers the gabion kit, plus rock and delivery allowances that we confirm for your project. Site preparation, excavation, base, drainage, equipment, labour, engineering and permits aren’t included unless they’re in your quote. The $4,500 inc GST shown here is an illustration only.</p></article>
+        <article><h3>Can I supply my own rock or get help with part of the build?</h3><p>Often, yes. Rock needs to be the right size and type for the cage and your project, so we check whether rock you already have is suitable. Supply-only and partial-install options depend on your location and our availability, so we’ll confirm what’s possible for you.</p></article>
+        <article><h3>What preparation, configuration and approvals does my site need?</h3><p>Wall width and height are set by your site, not by looks alone. Access, loads, boundaries, fences, pools, ground conditions and drainage all play a part, and some walls need engineering or local authority advice. We review this with you, and we can’t confirm a wall suits your site until we have.</p></article>
+        <article><h3>How does a complete project compare with limestone?</h3><p>Compare like with like: the same dimensions and purpose, including site prep, materials, rock, delivery, drainage, labour, engineering, permits and GST. Depending on the site, limestone can work out cheaper. There’s no saving that applies to every project, so we’re happy to help you compare.</p></article>
+      </div>
+    </section>
 
     <div class="choices" aria-label="Your next step">
       <div class="c1">
